@@ -3,12 +3,16 @@ package com.example.taxigo;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +35,38 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout claim = findViewById(R.id.claim);
         LinearLayout settings = findViewById(R.id.settings);
         LinearLayout support = findViewById(R.id.support);
+
+        CardView startdestination = findViewById(R.id.startaddress);
+        CardView enddestination = findViewById(R.id.destination);
+        startdestination.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,Search_Activity.class));
+            }
+        });
+        enddestination.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,Search_Activity.class));
+            }
+        });
+
+
+
+
+        ArrayList<modelclass> droplist = new ArrayList<>();
+
+
+        searching_location_Adapter sadapter = new searching_location_Adapter(droplist,this);
+        droplist.add(new modelclass("Meridean Overseas Education Consultants","Vaishali Marg, Ganga Sagar-B,Nemi Nagar Exaxhange"));
+        droplist.add(new modelclass("Jaipur","Rajsthan,India"));
+        droplist.add(new modelclass("Sitapur","Jaipur Rajasthan,India"));
+        droplist.add(new modelclass("Jaipur Junction ","Station Road ,Gopalbari,Jaipur,Rajasthan,India"));
+        RecyclerView dropreyclerview = findViewById(R.id.dropreyclerview);
+        dropAdapter adapter = new dropAdapter(droplist,this);
+
+        dropreyclerview.setLayoutManager(new LinearLayoutManager(this));
+        dropreyclerview.setAdapter(adapter);
 
 
         localsenditems.setOnClickListener(new View.OnClickListener() {

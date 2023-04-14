@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Taxigo"
         tools:targetApi="31">
         <activity
+            android:name=".Search_Activity"
+            android:exported="false" />
+        <activity
             android:name=".support_Activity"
             android:exported="false" />
         <activity
