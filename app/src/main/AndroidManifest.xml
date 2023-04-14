@@ -12,43 +12,48 @@
         android:theme="@style/Theme.Taxigo"
         tools:targetApi="31">
         <activity
-            android:name=".support_Activity"
+            android:name=".side_profile_activites.profile_Activity"
+            android:exported="false"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/Theme.Taxigo.NoActionBar" />
+        <activity
+            android:name=".Search_Activity"
             android:exported="false" />
         <activity
-            android:name=".settings_Activity"
+            android:name=".side_profile_activites.support_Activity"
             android:exported="false" />
         <activity
-            android:name=".claim_activity"
+            android:name=".side_profile_activites.settings_Activity"
             android:exported="false" />
         <activity
-            android:name=".Notification_Activity"
+            android:name=".side_profile_activites.claim_activity"
             android:exported="false" />
         <activity
-            android:name=".powerpass_Activity"
+            android:name=".side_profile_activites.Notification_Activity"
             android:exported="false" />
         <activity
-            android:name=".taxigocoin_Activity"
+            android:name=".side_profile_activites.powerpass_Activity"
             android:exported="false" />
         <activity
-            android:name=".myreward_Activity"
+            android:name=".side_profile_activites.taxigocoin_Activity"
             android:exported="false" />
         <activity
-            android:name=".referearn_Activity"
+            android:name=".side_profile_activites.myreward_Activity"
             android:exported="false" />
         <activity
-            android:name=".myride_Activity"
+            android:name=".side_profile_activites.referearn_Activity"
             android:exported="false" />
         <activity
-            android:name=".Payment_Activity"
+            android:name=".side_profile_activites.myride_Activity"
             android:exported="false" />
         <activity
-            android:name=".ridewin_Activity"
+            android:name=".side_profile_activites.Payment_Activity"
             android:exported="false" />
         <activity
-            android:name=".Local_send_items_activity"
+            android:name=".side_profile_activites.ridewin_Activity"
             android:exported="false" />
         <activity
-            android:name=".profile_replace_activity"
+            android:name=".side_profile_activites.Local_send_items_activity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

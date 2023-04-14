@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Local_send_items_activity">
+    tools:context=".side_profile_activites.Local_send_items_activity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

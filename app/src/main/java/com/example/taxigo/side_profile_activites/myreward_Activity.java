@@ -1,14 +1,16 @@
-package com.example.taxigo;
+package com.example.taxigo.side_profile_activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Notification_Activity extends AppCompatActivity {
+import com.example.taxigo.R;
+
+public class myreward_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notification);
+        setContentView(R.layout.activity_myreward);
     }
 }

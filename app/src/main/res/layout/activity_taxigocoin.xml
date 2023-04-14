@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".taxigocoin_Activity">
+    tools:context=".side_profile_activites.taxigocoin_Activity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
