@@ -8,9 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.taxigo.Adapters.searching_location_Adapter;
-import com.example.taxigo.ModuleClasses.modelclass;
-
 import java.util.ArrayList;
 
 public class Search_Activity extends AppCompatActivity {

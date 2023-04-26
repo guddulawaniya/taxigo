@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Taxigo</string>
-    <string name="title_activity_complete_profile">Complete Your Profile</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_profile">Your Name</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
