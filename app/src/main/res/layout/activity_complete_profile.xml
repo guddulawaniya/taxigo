@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".side_profile_activites.complete_profile_Activity">
+    tools:context=".complete_profile_Activity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
@@ -19,25 +19,58 @@
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#EFC41A"
             android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
+            app:collapsedTitleTextColor="@color/textcolor"
+            app:expandedTitleTextColor="@color/textcolor"
+            app:title="Complete Profile"
+            app:contentScrim="#EFC41A"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:toolbarId="@+id/toolbar">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user_icon"
+                app:layout_collapseMode="parallax"
+                app:tint="#6AF4FF81" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/Theme.Taxigo.PopupOverlay" />
+                app:popupTheme="@style/Theme.Taxigo.PopupOverlay">
+                <ImageView
+                    android:id="@+id/completeprofileback"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/arrow_back_icon" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/textcolor"
+                    android:drawableStart="@drawable/help_support_icon"
+                    android:layout_marginEnd="20dp"
+                    android:text="Support" />
+
+            </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
 
         <LinearLayout
@@ -49,8 +82,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp"
                 android:layout_margin="10dp"
+                android:padding="4dp"
+                android:textStyle="bold"
                 android:text="Whats's pending?"
                 android:textColor="@color/textcolor"
                 android:textSize="18sp" />
@@ -61,7 +95,7 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
-                android:hint="Email address"
+                android:text="Email address"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
                 android:textSize="18sp" />
@@ -72,7 +106,7 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
-                android:hint="Date of birth"
+                android:text="Date of birth"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
                 android:textSize="18sp" />
@@ -83,7 +117,7 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
-                android:hint="Add a payment method"
+                android:text="Add a payment method"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
                 android:textSize="18sp" />
@@ -94,7 +128,7 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
-                android:hint="Home location"
+                android:text="Home location"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
                 android:textSize="18sp" />
@@ -105,7 +139,7 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
-                android:hint="Work location"
+                android:text="Work location"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
                 android:textSize="18sp" />
@@ -116,9 +150,10 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
-                android:hint="Emergency contacts"
+                android:text="Emergency contacts"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
+                android:textColorHint="@color/hintcolor"
                 android:textSize="18sp" />
 
             <View
@@ -133,8 +168,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:drawableTint="@color/hintcolor"
-                android:hint="Emergency contacts"
                 android:padding="4dp"
+                android:textStyle="bold"
                 android:text="Completed"
                 android:textColor="@color/textcolor"
                 android:textSize="18sp" />
@@ -145,9 +180,10 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="#18831D"
-                android:hint="Sign Up"
+                android:text="Sign Up"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
+                android:textColorHint="@color/hintcolor"
                 android:textSize="18sp" />
 
             <TextView
@@ -156,9 +192,10 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="#18831D"
-                android:hint="Name"
+                android:text="Name"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
+                android:textColorHint="@color/hintcolor"
                 android:textSize="18sp" />
 
             <TextView
@@ -167,9 +204,10 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="#18831D"
-                android:hint="Book yout first ride"
+                android:text="Book yout first ride"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
+                android:textColorHint="@color/hintcolor"
                 android:textSize="18sp" />
         </LinearLayout>
 

@@ -610,7 +610,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/earnmoney_arrow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="24dp"

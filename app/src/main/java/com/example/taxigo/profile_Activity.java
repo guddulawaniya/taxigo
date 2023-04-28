@@ -1,18 +1,13 @@
-package com.example.taxigo.side_profile_activites;
+package com.example.taxigo;
 
 import android.os.Bundle;
-
-import com.google.android.material.appbar.CollapsingToolbarLayout;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.view.View;
-
-import com.example.taxigo.R;
 import com.example.taxigo.databinding.ActivityProfileBinding;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 public class profile_Activity extends AppCompatActivity {
 
@@ -24,6 +19,13 @@ public class profile_Activity extends AppCompatActivity {
 
         binding = ActivityProfileBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        binding.completeprofileback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         Toolbar toolbar = binding.toolbar;
         setSupportActionBar(toolbar);

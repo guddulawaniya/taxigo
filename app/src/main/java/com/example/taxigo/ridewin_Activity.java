@@ -1,10 +1,8 @@
-package com.example.taxigo.side_profile_activites;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.taxigo;
 
 import android.os.Bundle;
 
-import com.example.taxigo.R;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ridewin_Activity extends AppCompatActivity {
 

@@ -1,15 +1,14 @@
-package com.example.taxigo.side_profile_activites;
+package com.example.taxigo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.opengl.Visibility;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.taxigo.R;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 public class Payment_Activity extends AppCompatActivity {
 
@@ -20,6 +19,7 @@ public class Payment_Activity extends AppCompatActivity {
         TextView selectappbottomsheet = findViewById(R.id.selectappbottomsheet);
         ImageView paymentbackarrow = findViewById(R.id.paymentbackarrow);
 
+        CollapsingToolbarLayout toolbar = findViewById(R.id.toolbar_layout);
 
 
 

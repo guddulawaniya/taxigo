@@ -1,4 +1,4 @@
-package com.example.taxigo.Adapters;
+package com.example.taxigo;
 
 
 import android.view.LayoutInflater;
@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.taxigo.R;
 import com.smarteist.autoimageslider.SliderViewAdapter;
 
 public class SliderAdapter extends SliderViewAdapter<SliderAdapter.Holder> {

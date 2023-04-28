@@ -15,6 +15,12 @@
             android:name=".support_Activity"
             android:exported="false" />
         <activity
+            android:name=".Redirect_support_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Search_Activity"
+            android:exported="false" />
+        <activity
             android:name=".settings_Activity"
             android:exported="false" />
         <activity
@@ -39,16 +45,25 @@
             android:name=".myride_Activity"
             android:exported="false" />
         <activity
+            android:name=".complete_profile_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Payment_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Earn_money"
             android:exported="false" />
         <activity
             android:name=".ridewin_Activity"
             android:exported="false" />
         <activity
+            android:name=".full_map_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Local_send_items_activity"
             android:exported="false" />
         <activity
-            android:name=".profile_replace_activity"
+            android:name=".profile_Activity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
