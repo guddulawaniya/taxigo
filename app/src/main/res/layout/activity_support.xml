@@ -7,23 +7,26 @@
     tools:context=".support_Activity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#EFC41A"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/Theme.Taxigo.AppBarOverlay">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:background="#EFC41A"
+            app:title="Support"
             app:expandedTitleTextColor="@color/textcolor"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:title="Support">
+            app:collapsedTitleTextColor="@color/textcolor"
+            app:contentScrim="#EFC41A"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
 
-            <!--We are adding the image that we have added earlier
-                  in the drawable folder.The attribute app:layout_collapseMode="parallax"
-                  causes the image to move when user scrolls at a specific ratio. -->
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -33,47 +36,189 @@
                 app:layout_collapseMode="parallax"
                 app:tint="#6AF4FF81" />
 
-            <!-- The attribute app:layout_collapseMode="pin" is set so that
-                 sticks to the top when the user scrolls the view up-->
             <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" >
+                app:popupTheme="@style/Theme.Taxigo.PopupOverlay" >
+
                 <ImageView
+                    android:id="@+id/supportbackbutton"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/arrow_back_icon" />
 
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:gravity="center"
-                    android:drawablePadding="5dp"
-                    android:textColor="@color/textcolor"
-                    android:drawableTint="@color/textcolor"
-                    android:drawableStart="@drawable/ticket_icon"
-                    android:layout_marginEnd="20dp"
-                    android:text="Tickets" />
             </androidx.appcompat.widget.Toolbar>
 
-
-
-
         </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#E8E8E8"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
 
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:backgroundTint="@color/white"
+                android:elevation="3dp"
+                app:cardCornerRadius="20dp">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/search_icon"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="#787676"
+                    android:gravity="center_vertical"
+                    android:textColor="#787676"
+                    android:padding="10dp"
+                    android:text="Search issue"
+                    android:textSize="18sp" />
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="5dp">
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your last ride"
+                    android:textColor="#101010"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/viewallride"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="View all rides"
+                    android:textColor="#1E36BA"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <include layout="@layout/ride_layout_recyclerview"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="3dp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="25dp"
+                            android:backgroundTint="@color/black"
+                            app:cardCornerRadius="50dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="8dp"
+                                app:srcCompat="@drawable/issue_icon" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textView21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="15dp"
+                            android:text="Haveing an issue?"
+                            android:textColor="@color/textcolor" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/textView22"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:background="@drawable/helpbg"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="Get Help"
+                                android:textColor="#3F51B5"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider7"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DADADA" />
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+
+                        android:padding="5dp"
+                        android:text="View all tickets"
+                        android:textColor="#3F51B5"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="FAQs"
+                android:textColor="@color/textcolor"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        <include layout="@layout/faqs_layout_support"/>
+
+
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
