@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Notification_Activity">
-
+    tools:context=".About_Activity">
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
@@ -23,7 +22,7 @@
             android:fitsSystemWindows="true"
             app:collapsedTitleTextColor="@color/textcolor"
             app:expandedTitleTextColor="@color/textcolor"
-            app:title="Notification"
+            app:title="About"
             app:expandedTitleMarginBottom="40dp"
             app:contentScrim="#EFC41A"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
@@ -34,9 +33,9 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:scaleType="centerCrop"
-                android:src="@drawable/notifications_icon"
+                android:src="@drawable/scooter"
                 app:layout_collapseMode="parallax"
-                app:tint="#DA9939" />
+                app:tint="#6AF4FF81" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -51,14 +50,17 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/arrow_back_icon" />
 
-                <ImageView
+                <TextView
+                    android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:gravity="center"
                     android:drawablePadding="5dp"
-                    android:src="@drawable/more_vert"
-                    android:layout_marginEnd="20dp" />
+                    android:textColor="@color/textcolor"
+                    android:drawableStart="@drawable/help_support_icon"
+                    android:layout_marginEnd="20dp"
+                    android:text="Support" />
 
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -69,16 +71,50 @@
         android:background="@color/white"
         android:layout_height="match_parent"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/notificationrecyclerview"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp" />
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Privacy Policy"
+                android:textColor="@color/textcolor"
+                android:textSize="15dp" />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Term and Conditions"
+                android:textColor="@color/textcolor"
+                android:textSize="15dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Join the team"
+                android:textColor="@color/textcolor"
+                android:textSize="15dp" />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Blog"
+                android:textColor="@color/textcolor"
+                android:textSize="15dp" />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Software Licenses"
+                android:textColor="@color/textcolor"
+                android:textSize="15dp" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

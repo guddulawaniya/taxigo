@@ -4,6 +4,7 @@ public class modelclass {
 
     String addressTitle,subTitle;
 
+
     public modelclass(String addressTitle, String subTitle) {
         this.addressTitle = addressTitle;
         this.subTitle = subTitle;

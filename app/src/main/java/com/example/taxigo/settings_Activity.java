@@ -26,6 +26,8 @@ public class settings_Activity extends AppCompatActivity {
 
         TextView support = findViewById(R.id.supportsetting);
 
+
+
         support.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
