@@ -17,6 +17,15 @@ public class support_Activity extends AppCompatActivity {
 
         ImageView supportback = findViewById(R.id.supportbackbutton);
         TextView viewallride = findViewById(R.id.viewallride);
+        TextView viewalltickets = findViewById(R.id.viewalltickets);
+
+
+        viewalltickets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Ticket_Activity.class));
+            }
+        });
         viewallride.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
