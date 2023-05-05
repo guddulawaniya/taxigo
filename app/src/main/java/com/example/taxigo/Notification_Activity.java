@@ -1,6 +1,8 @@
 package com.example.taxigo;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -16,6 +18,13 @@ public class Notification_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_notification);
 
         ArrayList<noti_module> list = new ArrayList<>();
+        ImageView backbutton = findViewById(R.id.completeprofileback);
+        backbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         RecyclerView recyclerView = findViewById(R.id.notificationrecyclerview);
 

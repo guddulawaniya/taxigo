@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/searchingbackimage"
+            android:id="@+id/completeprofileback"
             android:layout_width="30dp"
             android:layout_height="30dp"
             app:srcCompat="@drawable/arrow_back_icon" />

@@ -1,12 +1,8 @@
 package com.example.taxigo;
 
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,15 +10,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.net.URLEncoder;
-
 public class Earn_money extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_earn_money);
-        ImageView backbutton = findViewById(R.id.earnmoneybackarrow);
         TextView supporttext = findViewById(R.id.earnmoneysupport);
         TextView callbutton = findViewById(R.id.callbutton);
         TextView whastappbutton = findViewById(R.id.whatsappbuttton);
@@ -60,13 +53,13 @@ public class Earn_money extends AppCompatActivity {
             }
         });
 
+        ImageView backbutton = findViewById(R.id.completeprofileback);
         backbutton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 onBackPressed();
             }
         });
-
 
         supporttext.setOnClickListener(new View.OnClickListener() {
             @Override

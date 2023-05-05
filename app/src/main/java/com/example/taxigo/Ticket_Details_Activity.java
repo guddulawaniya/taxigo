@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Ticket_Details_Activity extends AppCompatActivity {
@@ -15,6 +16,14 @@ public class Ticket_Details_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_ticket_details);
 
         TextView viewconversion = findViewById(R.id.viewconversion);
+
+        ImageView backbutton = findViewById(R.id.completeprofileback);
+        backbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         viewconversion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

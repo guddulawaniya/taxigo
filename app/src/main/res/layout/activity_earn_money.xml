@@ -19,7 +19,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
 
         <ImageView
-            android:id="@+id/earnmoneybackarrow"
+            android:id="@+id/completeprofileback"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:scaleType="centerCrop"

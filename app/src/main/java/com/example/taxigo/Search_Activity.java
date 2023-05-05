@@ -29,7 +29,7 @@ public class Search_Activity extends AppCompatActivity {
         searchinglocationlist.add(new modelclass("Sitapur","Jaipur Rajasthan,India"));
         searchinglocationlist.add(new modelclass("Jaipur Junction ","Station Road ,Gopalbari,Jaipur,Rajasthan,India"));
 
-        ImageView searchingbackimage = findViewById(R.id.searchingbackimage);
+        ImageView searchingbackimage = findViewById(R.id.completeprofileback);
         ImageView selectmapicon = findViewById(R.id.selectmapicon);
         TextView selectmap = findViewById(R.id.selectmap);
 
@@ -46,6 +46,13 @@ public class Search_Activity extends AppCompatActivity {
             }
         });
 
+        ImageView backbutton = findViewById(R.id.completeprofileback);
+        backbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         searchingbackimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

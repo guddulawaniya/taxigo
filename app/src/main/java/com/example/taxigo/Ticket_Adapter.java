@@ -27,7 +27,7 @@ public class Ticket_Adapter extends RecyclerView.Adapter<Ticket_Adapter.viewhold
     @NonNull
     @Override
     public viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.drop_suggestion_layout,null);
+        View view = LayoutInflater.from(context).inflate(R.layout.ticket_layout_card,parent , false);
         return new viewholder(view);
     }
 

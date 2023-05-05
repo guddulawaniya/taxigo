@@ -17,8 +17,13 @@ public class Payment_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
         TextView selectappbottomsheet = findViewById(R.id.selectappbottomsheet);
-        ImageView paymentbackarrow = findViewById(R.id.paymentbackarrow);
-
+        ImageView backbutton = findViewById(R.id.completeprofileback);
+        backbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         CollapsingToolbarLayout toolbar = findViewById(R.id.toolbar_layout);
 
 
@@ -27,14 +32,6 @@ public class Payment_Activity extends AppCompatActivity {
 
         LinearLayout bottomsheetselectapp = findViewById(R.id.selectappsheetlinear);
 
-
-
-        paymentbackarrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
         selectappbottomsheet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

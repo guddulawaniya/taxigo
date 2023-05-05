@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -19,5 +21,12 @@ public class select_an_order_Activity extends AppCompatActivity {
         select_order_Adapter viewPagerAdapter = new select_order_Adapter(getSupportFragmentManager());
         tabs.setupWithViewPager(viewPager);
         viewPager.setAdapter(viewPagerAdapter);
+        ImageView backbutton = findViewById(R.id.completeprofileback);
+        backbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 }
