@@ -36,13 +36,13 @@ public class Search_Activity extends AppCompatActivity {
         selectmap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Search_Activity.this, full_map_Activity.class));
+                startActivity(new Intent(Search_Activity.this, MapsActivity.class));
             }
         });
         selectmapicon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Search_Activity.this, full_map_Activity.class));
+                startActivity(new Intent(Search_Activity.this, MapsActivity.class));
             }
         });
 
