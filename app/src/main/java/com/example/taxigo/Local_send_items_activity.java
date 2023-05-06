@@ -48,7 +48,8 @@ public class Local_send_items_activity extends AppCompatActivity {
         localbuttomsheettext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                local_bottom_sheet sheet = new local_bottom_sheet();
+                sheet.show(getSupportFragmentManager(),"myfragfment");
             }
         });
 
