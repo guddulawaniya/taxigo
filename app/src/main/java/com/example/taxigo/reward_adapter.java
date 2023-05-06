@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,12 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class dropAdapter extends RecyclerView.Adapter<dropAdapter.viewholder>{
+public class reward_adapter extends RecyclerView.Adapter<reward_adapter.viewholder>{
 
-    ArrayList<modelclass> list ;
+    ArrayList<reward_module> list ;
     Context context;
 
-    public dropAdapter(ArrayList<modelclass> list, Context context) {
+    public reward_adapter(ArrayList<reward_module> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -24,15 +25,14 @@ public class dropAdapter extends RecyclerView.Adapter<dropAdapter.viewholder>{
     @NonNull
     @Override
     public viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.drop_suggestion_layout,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.reward_layout,parent, false);
         return new viewholder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull viewholder holder, int position) {
-        modelclass dropmodel = list.get(position);
-        holder.addresstitle.setText(dropmodel.getAddressTitle());
-        holder.subtitle.setText(dropmodel.getSubTitle());
+        reward_module module = list.get(position);
+        holder.rewardimage.setImageResource(module.getImage());
 
     }
 
@@ -43,13 +43,28 @@ public class dropAdapter extends RecyclerView.Adapter<dropAdapter.viewholder>{
 
     class viewholder extends RecyclerView.ViewHolder {
 
-        TextView addresstitle,subtitle;
+        ImageView rewardimage;
         public viewholder(@NonNull View itemView) {
             super(itemView);
 
-            addresstitle = itemView.findViewById(R.id.addressTitle);
-            subtitle = itemView.findViewById(R.id.subTitle);
+            rewardimage = itemView.findViewById(R.id.reward_image);
+
         }
     }
 
+}
+class reward_module{
+    int image;
+
+    public reward_module(int image) {
+        this.image = image;
+    }
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
 }

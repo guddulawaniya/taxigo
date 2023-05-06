@@ -12,4 +12,6 @@
     <color name="basecolor2">#8C5709</color>
     <color name="textcolor">#373636</color>
     <color name="hintcolor">#A5A0A0</color>
+    <color name="greendotcolor">#4CAF50</color>
+    <color name="reddotcolor">#F44336</color>
 </resources>

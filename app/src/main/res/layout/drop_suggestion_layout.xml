@@ -3,17 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_height="wrap_content"
     android:background="@color/white">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:padding="5dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center_vertical"
         android:layout_marginEnd="9dp"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,9 +25,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            android:layout_alignParentTop="true"
             android:layout_marginStart="13dp"
             android:layout_toStartOf="@+id/droplike"
-            android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/dropicon"
             android:orientation="vertical"
             app:layout_constraintEnd_toStartOf="@+id/droplike"
@@ -38,8 +40,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="Meridean overseas Education Consultants"
                 android:singleLine="true"
+                android:text="Meridean overseas Education Consultants"
                 android:textColor="@color/textcolor"
                 android:textColorHint="#656262"
                 android:textSize="16sp" />
@@ -52,8 +54,8 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="18dp"
-                android:text="Vaishali Marg, Ganga Sagar- B Nemi Nagar"
                 android:singleLine="true"
+                android:text="Vaishali Marg, Ganga Sagar- B Nemi Nagar"
                 android:textColor="#8C8C8C"
 
                 android:textSize="15sp" />
@@ -75,9 +77,9 @@
             android:id="@+id/dropicon"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:layout_marginTop="4dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
             android:backgroundTint="#9D9D9E"
             app:cardCornerRadius="50dp"
             app:layout_constraintStart_toStartOf="parent">

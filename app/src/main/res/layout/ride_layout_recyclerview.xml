@@ -88,8 +88,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
-                android:drawableStart="@drawable/greendot"
+                android:drawableStart="@drawable/dot"
                 android:drawablePadding="15dp"
+                android:drawableTint="@color/greendotcolor"
                 android:singleLine="true"
                 android:text="140, Ghanshyam vihar , Panchyawala , jaipur  Rajsthan.."
                 android:textColor="@color/textcolor" />
@@ -103,9 +104,10 @@
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginBottom="10dp"
-                android:drawableStart="@drawable/reddot"
+                android:drawableStart="@drawable/dot"
                 android:drawablePadding="15dp"
                 android:singleLine="true"
+                android:drawableTint="@color/reddotcolor"
                 android:text="140, Ghanshyam vihar , Panchyawala , jaipur  Rajsthan.."
                 android:textColor="@color/textcolor" />
         </LinearLayout>
