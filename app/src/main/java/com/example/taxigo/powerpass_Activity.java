@@ -1,14 +1,13 @@
 package com.example.taxigo;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
-
-import java.util.ArrayList;
 
 public class powerpass_Activity extends AppCompatActivity {
 
@@ -19,13 +18,18 @@ public class powerpass_Activity extends AppCompatActivity {
 
         TabLayout tabs = findViewById(R.id.tabs);
         ViewPager viewPager = findViewById(R.id.view_pager);
+        ImageView backbutton = findViewById(R.id.completeprofileback);
+        backbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
 
 
-        Power_pass_setTablayout_Adapter viewPagerAdapter = new Power_pass_setTablayout_Adapter(getSupportFragmentManager());
+
+        viewPager.setAdapter(new Power_pass_setTablayout_Adapter(getSupportFragmentManager()));
         tabs.setupWithViewPager(viewPager);
-        viewPager.setAdapter(viewPagerAdapter);
-
-        // Prepare view pager
     }
 }

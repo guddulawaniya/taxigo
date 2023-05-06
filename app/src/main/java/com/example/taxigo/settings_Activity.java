@@ -25,7 +25,38 @@ public class settings_Activity extends AppCompatActivity {
         LinearLayout logoutlinear = findViewById(R.id.logoutlinear);
 
         TextView support = findViewById(R.id.supportsetting);
+        logoutlinear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
+
+        aboutlinear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), About_Activity.class));
+            }
+        });
+        languagelinear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Languages_Activity.class));
+            }
+        });
+        preferencelinear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), preference_activity.class));
+            }
+        });
+        favoritelinear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), favorites_Activity.class));
+
+            }
+        });
 
 
         support.setOnClickListener(new View.OnClickListener() {

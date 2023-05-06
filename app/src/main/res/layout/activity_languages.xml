@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".Languages_Activity">
 
@@ -79,7 +80,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/english"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -92,6 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
+                android:id="@+id/hindi"
                 android:padding="3dp"
                 android:text="हिन्दी (hindi)"
                 android:textColor="@color/textcolor"
@@ -101,6 +103,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
+                android:id="@+id/kannada"
                 android:padding="3dp"
                 android:text="ಕನ್ನಡ (kannada)"
                 android:textColor="@color/textcolor"
@@ -112,6 +115,7 @@
                 android:layout_marginTop="30dp"
                 android:padding="3dp"
                 android:text="ತೆಲುಗು (Telugu)"
+                android:id="@+id/telugu"
                 android:textColor="@color/textcolor"
                 android:textSize="16sp" />
 
@@ -120,6 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:padding="3dp"
+                android:id="@+id/tamil"
                 android:text="ತಮಿಳು (Tamil)"
                 android:textColor="@color/textcolor"
                 android:textSize="16sp" />
@@ -130,6 +135,7 @@
                 android:layout_marginTop="30dp"
                 android:padding="3dp"
                 android:text="मराठी (Marathi)"
+                android:id="@+id/marathi"
                 android:textColor="@color/textcolor"
                 android:textSize="16sp" />
 

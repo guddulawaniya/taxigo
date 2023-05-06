@@ -3,7 +3,6 @@ package com.example.taxigo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -18,9 +17,9 @@ public class claim_activity extends AppCompatActivity {
         setContentView(R.layout.activity_claim);
         TabLayout tabs = findViewById(R.id.tabs);
         ViewPager viewPager = findViewById(R.id.view_pager);
-         SectionsPagerAdapter viewPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+
+        viewPager.setAdapter(new SectionsPagerAdapter(getSupportFragmentManager()));
         tabs.setupWithViewPager(viewPager);
-        viewPager.setAdapter(viewPagerAdapter);
 
 
         ImageView backbutton = findViewById(R.id.completeprofileback);

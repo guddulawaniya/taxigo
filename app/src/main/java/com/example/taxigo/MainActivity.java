@@ -40,6 +40,27 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout completeprofile = findViewById(R.id.completeprofile);
         ConstraintLayout profileActivity = findViewById(R.id.profile);
         ImageView earnmoney = findViewById(R.id.earnmoney_arrow);
+        CardView startdestination = findViewById(R.id.startaddress);
+        CardView enddestination = findViewById(R.id.destination);
+        CardView menubutton = findViewById(R.id.menubutton);
+        DrawerLayout drawerLayout = findViewById(R.id.drawer);
+
+
+
+
+
+
+        ArrayList<modelclass> droplist = new ArrayList<>();
+
+        droplist.add(new modelclass("Meridean Overseas Education Consultants","Vaishali Marg, Ganga Sagar-B,Nemi Nagar Exaxhange"));
+        droplist.add(new modelclass("Jaipur","Rajsthan,India"));
+        droplist.add(new modelclass("Sitapur","Jaipur Rajasthan,India"));
+        droplist.add(new modelclass("Jaipur Junction ","Station Road ,Gopalbari,Jaipur,Rajasthan,India"));
+        RecyclerView dropreyclerview = findViewById(R.id.dropreyclerview);
+        dropAdapter adapter = new dropAdapter(droplist,this);
+
+        dropreyclerview.setLayoutManager(new LinearLayoutManager(this));
+        dropreyclerview.setAdapter(adapter);
 
         profileActivity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,13 +75,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-        CardView startdestination = findViewById(R.id.startaddress);
-        CardView enddestination = findViewById(R.id.destination);
         startdestination.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,20 +94,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-        ArrayList<modelclass> droplist = new ArrayList<>();
-
-        droplist.add(new modelclass("Meridean Overseas Education Consultants","Vaishali Marg, Ganga Sagar-B,Nemi Nagar Exaxhange"));
-        droplist.add(new modelclass("Jaipur","Rajsthan,India"));
-        droplist.add(new modelclass("Sitapur","Jaipur Rajasthan,India"));
-        droplist.add(new modelclass("Jaipur Junction ","Station Road ,Gopalbari,Jaipur,Rajasthan,India"));
-        RecyclerView dropreyclerview = findViewById(R.id.dropreyclerview);
-        dropAdapter adapter = new dropAdapter(droplist,this);
-
-        dropreyclerview.setLayoutManager(new LinearLayoutManager(this));
-        dropreyclerview.setAdapter(adapter);
         localsenditems.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -174,8 +174,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        CardView menubutton = findViewById(R.id.menubutton);
-        DrawerLayout drawerLayout = findViewById(R.id.drawer);
+
         menubutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

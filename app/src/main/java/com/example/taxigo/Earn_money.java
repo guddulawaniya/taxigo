@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.smarteist.autoimageslider.SliderView;
+
 public class Earn_money extends AppCompatActivity {
 
     @Override
@@ -19,6 +21,14 @@ public class Earn_money extends AppCompatActivity {
         TextView supporttext = findViewById(R.id.earnmoneysupport);
         TextView callbutton = findViewById(R.id.callbutton);
         TextView whastappbutton = findViewById(R.id.whatsappbuttton);
+        SliderView sliderView = findViewById(R.id.image_slider);
+
+
+        int image[] = {R.drawable.image1,R.drawable.image2,R.drawable.image3};
+
+        SliderAdapter sliderAdapter = new SliderAdapter(image);
+        sliderView.setSliderAdapter(sliderAdapter);
+
 
         callbutton.setOnClickListener(new View.OnClickListener() {
             @Override

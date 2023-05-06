@@ -14,33 +14,32 @@ public class Power_pass_setTablayout_Adapter extends FragmentPagerAdapter {
     }
     @NonNull
     @Override
-    public Fragment getItem(int position)
-    {
-       switch (position)
-       {
-           case 0: power_pass_bike bikeFragmentClaims = new power_pass_bike();
-           return bikeFragmentClaims;
-           case 1:power_pass_auto auto_fragment_claims = new power_pass_auto();
-           return auto_fragment_claims;
-           default:Bike_fragment_claims bike = new Bike_fragment_claims();
-           return bike;
-
-       }
+    public Fragment getItem(int position) {
+        switch (position)
+        {
+            case 0: return new power_pass_bike();
+            case 1: return new power_pass_auto();
+            default: return new power_pass_bike();
+        }
     }
 
     @Override
-    public int getCount()
-    {
+    public int getCount() {
         return 2;
     }
 
-    @Override
-    public CharSequence getPageTitle(int position)
-    {
-        String title = null;
-        if (position == 0)
+    public CharSequence getPageTitle(int position){
+        String title =null;
+        if(position==0)
+        {
             title = "Bike";
-        else title = "Auto";
+
+        }
+        if(position==1)
+        {
+            title = "Auto";
+
+        }
         return title;
     }
 }
