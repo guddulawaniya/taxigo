@@ -1,6 +1,7 @@
 package com.example.taxigo;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,6 +19,25 @@ public class support_Activity extends AppCompatActivity {
         ImageView supportback = findViewById(R.id.supportbackbutton);
         TextView viewallride = findViewById(R.id.viewallride);
         TextView viewalltickets = findViewById(R.id.viewalltickets);
+        TextView searchissuebar = findViewById(R.id.searchissuebar);
+        TextView gethelptext = findViewById(R.id.gethelptext);
+        gethelptext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://www.rapido.bike/";
+
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+
+        searchissuebar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), search_issue_activity.class));
+            }
+        });
 
 
         viewalltickets.setOnClickListener(new View.OnClickListener() {

@@ -1,24 +1,37 @@
 package com.example.taxigo;
 
+import android.Manifest;
+import android.Manifest.permission;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 
 import java.util.ArrayList;
 
@@ -26,7 +39,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
 
-    private GoogleMap mMap;
+    Location currentLocation;
+    FusedLocationProviderClient fusedLocationProviderClient;
+    private static final int REQUEST_CODE = 101;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +52,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+        fetchLocation();
 
         LinearLayout localsenditems = findViewById(R.id.localsend);
         LinearLayout ridewin = findViewById(R.id.ridewin);
@@ -53,10 +72,19 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         LinearLayout completeprofile = findViewById(R.id.completeprofile);
         ConstraintLayout profileActivity = findViewById(R.id.profile);
         ImageView earnmoney = findViewById(R.id.earnmoney_arrow);
+        ImageView getcurrentlocation = findViewById(R.id.getcurrentlocation);
         CardView startdestination = findViewById(R.id.startaddress);
         CardView enddestination = findViewById(R.id.destination);
         CardView menubutton = findViewById(R.id.menubutton);
         DrawerLayout drawerLayout = findViewById(R.id.drawer);
+
+        getcurrentlocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fetchLocation();
+
+            }
+        });
 
 
 
@@ -196,13 +224,55 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
     }
+
+
+
+
+
+    private void fetchLocation()
+    {
+        if (ContextCompat.checkSelfPermission(this, permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED &&
+        ContextCompat.checkSelfPermission(this, permission.ACCESS_COARSE_LOCATION)!=PackageManager.PERMISSION_GRANTED)
+        {
+            ActivityCompat.requestPermissions(this,new String[]{permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
+            return;
+        }
+        Task<Location> task =fusedLocationProviderClient.getLastLocation();
+        task.addOnSuccessListener(new OnSuccessListener<Location>() {
+            @Override
+            public void onSuccess(Location location) {
+                if (location != null) {
+                    currentLocation = location;
+                    Toast.makeText(getApplicationContext(), currentLocation.getLatitude() + "" + currentLocation.getLongitude(), Toast.LENGTH_SHORT).show();
+                    SupportMapFragment supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+                    assert supportMapFragment != null;
+                    supportMapFragment.getMapAsync(MainActivity.this);
+                }
+            }
+        });
+    }
+
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-        // Add a marker in Sydney and move the camera
-        LatLng jaipur = new LatLng( 26.910319689991816, 75.7912446117558);
-        mMap.addMarker(new MarkerOptions().position(jaipur).title("Jaipur"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(jaipur));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(jaipur,16f));
+        LatLng latLng = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
+        MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("I am here!");
+        googleMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16f));
+        googleMap.addMarker(markerOptions);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode==REQUEST_CODE) {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    fetchLocation();
+                }
+                else
+                {
+                    Toast.makeText(this, "Required Permissions", Toast.LENGTH_SHORT).show();
+                }
+        }
     }
 }

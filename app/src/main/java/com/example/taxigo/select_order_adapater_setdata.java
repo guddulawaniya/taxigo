@@ -1,6 +1,7 @@
 package com.example.taxigo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,12 @@ public class select_order_adapater_setdata extends RecyclerView.Adapter<select_o
         holder.money.setText(module.getMoney());
         holder.mode.setText(module.getMode());
         holder.status.setText(module.getStatus());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context, Order_details.class));
+            }
+        });
 
     }
 

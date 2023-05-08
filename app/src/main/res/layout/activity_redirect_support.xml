@@ -35,7 +35,7 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/support_icon"
                 app:layout_collapseMode="parallax"
-                app:tint="#6AF4FF81" />
+                app:tint="#6A757C2D" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
