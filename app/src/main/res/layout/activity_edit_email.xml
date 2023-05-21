@@ -4,14 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".myreward_Activity">
+    tools:context=".Edit_email">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:fitsSystemWindows="true"
-        android:theme="@style/Theme.Taxigo.AppBarOverlay">
+        android:theme="@style/Theme.Taxigo.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -22,11 +26,11 @@
             android:background="#EFC41A"
             android:fitsSystemWindows="true"
             app:collapsedTitleTextColor="@color/textcolor"
-            app:expandedTitleTextColor="@color/textcolor"
-            app:title="@string/my_rewards"
-            app:expandedTitleMarginBottom="40dp"
             app:contentScrim="#EFC41A"
+            app:expandedTitleMarginBottom="40dp"
+            app:expandedTitleTextColor="@color/textcolor"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="@string/edit_mail"
             app:toolbarId="@+id/toolbar">
 
             <ImageView
@@ -44,6 +48,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/Theme.Taxigo.PopupOverlay">
+
                 <ImageView
                     android:id="@+id/completeprofileback"
                     android:layout_width="30dp"
@@ -52,50 +57,44 @@
                     android:src="@drawable/arrow_back_icon" />
 
                 <TextView
+                    android:id="@+id/supporttext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
-                    android:gravity="center"
-                    android:drawablePadding="5dp"
-                    android:textColor="@color/textcolor"
-                    android:drawableStart="@drawable/help_support_icon"
                     android:layout_marginEnd="20dp"
-                    android:text="@string/support" />
+                    android:drawableStart="@drawable/help_support_icon"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="@string/support"
+                    android:textColor="@color/textcolor" />
 
             </androidx.appcompat.widget.Toolbar>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left|bottom"
-                android:layout_marginStart="32dp"
-                android:textSize="14dp"
-                android:id="@+id/messagereward"
-                android:layout_marginBottom="10dp"
-                app:layout_collapseMode="pin"
-                android:drawablePadding="5dp"
-                android:textColor="@color/textcolor"
-                android:layout_marginEnd="20dp"
-                android:text="@string/_0_coins_earned_from_scratch_card" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
-
-        <LinearLayout
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_height="match_parent">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/enter_the_issue_you_are_looking_for"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:id="@+id/rewardrecyclerview"
-            android:layout_margin="20dp"
-            android:layout_height="match_parent" />
-        </LinearLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
     </androidx.core.widget.NestedScrollView>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

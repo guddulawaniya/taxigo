@@ -4,15 +4,20 @@ import android.Manifest;
 import android.Manifest.permission;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
@@ -22,6 +27,8 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -33,30 +40,33 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 
 
-public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
 
-    Location currentLocation;
+    Location currentLocation ;
     FusedLocationProviderClient fusedLocationProviderClient;
     private static final int REQUEST_CODE = 101;
+    ArrayList<modelclass> droplist;
+    RecyclerView dropreyclerview;
+    TextView startaddresstext;
+    ImageView startaddress_favorate_icon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
-
-
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-        fetchLocation();
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
 
+
+        startaddress_favorate_icon = findViewById(R.id.startaddress_favorate_icon);
         LinearLayout localsenditems = findViewById(R.id.localsend);
         LinearLayout ridewin = findViewById(R.id.ridewin);
         LinearLayout payment = findViewById(R.id.payment);
@@ -72,12 +82,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         LinearLayout completeprofile = findViewById(R.id.completeprofile);
         ConstraintLayout profileActivity = findViewById(R.id.profile);
         ImageView earnmoney = findViewById(R.id.earnmoney_arrow);
-        ImageView getcurrentlocation = findViewById(R.id.getcurrentlocation);
+        CardView getcurrentlocation = findViewById(R.id.getcurrentlocation);
         CardView startdestination = findViewById(R.id.startaddress);
         CardView enddestination = findViewById(R.id.destination);
         CardView menubutton = findViewById(R.id.menubutton);
         DrawerLayout drawerLayout = findViewById(R.id.drawer);
+        startaddresstext = findViewById(R.id.startaddresstext);
 
+        fetchLocation();
         getcurrentlocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,21 +99,25 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
 
+        startaddress_favorate_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), favorites_Activity.class));
+            }
+        });
 
 
 
 
-        ArrayList<modelclass> droplist = new ArrayList<>();
 
-        droplist.add(new modelclass("Meridean Overseas Education Consultants","Vaishali Marg, Ganga Sagar-B,Nemi Nagar Exaxhange"));
-        droplist.add(new modelclass("Jaipur","Rajsthan,India"));
-        droplist.add(new modelclass("Sitapur","Jaipur Rajasthan,India"));
-        droplist.add(new modelclass("Jaipur Junction ","Station Road ,Gopalbari,Jaipur,Rajasthan,India"));
-        RecyclerView dropreyclerview = findViewById(R.id.dropreyclerview);
-        dropAdapter adapter = new dropAdapter(droplist,this);
+        droplist = new ArrayList<>();
 
-        dropreyclerview.setLayoutManager(new LinearLayoutManager(this));
-        dropreyclerview.setAdapter(adapter);
+//        droplist.add(new modelclass("Meridean Overseas Education Consultants","Vaishali Marg, Ganga Sagar-B,Nemi Nagar Exaxhange"));
+//        droplist.add(new modelclass("Jaipur","Rajsthan,India"));
+//        droplist.add(new modelclass("Sitapur","Jaipur Rajasthan,India"));
+//        droplist.add(new modelclass("Jaipur Junction ","Station Road ,Gopalbari,Jaipur,Rajasthan,India"));
+        dropreyclerview  = findViewById(R.id.dropreyclerview);
+
 
         profileActivity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -242,8 +258,27 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onSuccess(Location location) {
                 if (location != null) {
+                    Geocoder gc = new Geocoder(MainActivity.this,Locale.getDefault());
+
+
+                    List<Address> addresses = null;
+                    try {
+                        addresses = gc.getFromLocation(location.getLatitude(),location.getLongitude(),1);
+                        startaddresstext.setText(addresses.get(0).getAddressLine(0));
+
+                        droplist.add(new modelclass(addresses.get(0).getAddressLine(0),addresses.get(0).getLocality()));
+
+                        dropAdapter adapter = new  dropAdapter(droplist,MainActivity.this);
+
+                        dropreyclerview.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+                        dropreyclerview.setAdapter(adapter);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+
+
                     currentLocation = location;
-                    Toast.makeText(getApplicationContext(), currentLocation.getLatitude() + "" + currentLocation.getLongitude(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"You are Here", Toast.LENGTH_SHORT).show();
                     SupportMapFragment supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
                     assert supportMapFragment != null;
                     supportMapFragment.getMapAsync(MainActivity.this);
@@ -255,7 +290,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        LatLng latLng = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
+
+        LatLng latLng = new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude());
+
         MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("I am here!");
         googleMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16f));
@@ -268,6 +305,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         if (requestCode==REQUEST_CODE) {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     fetchLocation();
+
                 }
                 else
                 {
@@ -275,4 +313,5 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 }
         }
     }
+
 }

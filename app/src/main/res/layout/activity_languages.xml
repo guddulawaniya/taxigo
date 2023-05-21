@@ -24,7 +24,7 @@
             android:fitsSystemWindows="true"
             app:collapsedTitleTextColor="@color/textcolor"
             app:expandedTitleTextColor="@color/textcolor"
-            app:title="Choose Language"
+            app:title="@string/choose_language"
             app:expandedTitleMarginBottom="40dp"
             app:contentScrim="#EFC41A"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
@@ -62,87 +62,22 @@
                     android:textColor="@color/textcolor"
                     android:drawableStart="@drawable/help_support_icon"
                     android:layout_marginEnd="20dp"
-                    android:text="Support" />
+                    android:text="@string/support" />
 
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="20dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/english"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:padding="3dp"
-                android:text="English"
-                android:textColor="@color/textcolor"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:id="@+id/hindi"
-                android:padding="3dp"
-                android:text="हिन्दी (hindi)"
-                android:textColor="@color/textcolor"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:id="@+id/kannada"
-                android:padding="3dp"
-                android:text="ಕನ್ನಡ (kannada)"
-                android:textColor="@color/textcolor"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:padding="3dp"
-                android:text="ತೆಲುಗು (Telugu)"
-                android:id="@+id/telugu"
-                android:textColor="@color/textcolor"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:padding="3dp"
-                android:id="@+id/tamil"
-                android:text="ತಮಿಳು (Tamil)"
-                android:textColor="@color/textcolor"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:padding="3dp"
-                android:text="मराठी (Marathi)"
-                android:id="@+id/marathi"
-                android:textColor="@color/textcolor"
-                android:textSize="16sp" />
-
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+   <ListView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/listview"
+       android:layout_margin="20dp"
+       android:divider="@color/white"
+       app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/languagesetbutton"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
@@ -151,7 +86,6 @@
         app:cardCornerRadius="30dp">
 
         <TextView
-            android:id="@+id/textView18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -162,7 +96,7 @@
             android:drawablePadding="15dp"
             android:drawableTint="#FFC107"
             android:padding="5dp"
-            android:text="Save"
+            android:text="@string/save"
             android:textColor="#FFC107"
             android:textSize="18sp" />
     </androidx.cardview.widget.CardView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Taxigo</string>
+    <string name="about">माझ्याबद्दल</string>
+    <string name="support">समर्थन</string>
+    <string name="claims">दावे</string>
+    <string name="complete_profile">पूर्ण प्रोफाइल</string>
+    <string name="whats_s_pending">काय प्रलंबित आहे?</string>
+    <string name="email_address">ईमेल पत्ता</string>
+</resources>

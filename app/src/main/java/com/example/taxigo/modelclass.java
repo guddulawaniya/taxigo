@@ -8,7 +8,9 @@ public class modelclass {
     public modelclass(String addressTitle, String subTitle) {
         this.addressTitle = addressTitle;
         this.subTitle = subTitle;
+
     }
+
 
     public String getAddressTitle() {
         return addressTitle;

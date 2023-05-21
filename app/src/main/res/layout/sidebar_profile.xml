@@ -337,13 +337,13 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:backgroundTint="#FF9800"
-                        android:padding="4dp"
                         app:cardCornerRadius="50dp">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
+                            android:layout_margin="7dp"
                             app:srcCompat="@drawable/trophy"
                             app:tint="@color/white" />
                     </androidx.cardview.widget.CardView>

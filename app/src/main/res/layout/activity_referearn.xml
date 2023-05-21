@@ -55,7 +55,7 @@
 
 
                 <TextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/faqtexttoolbar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
@@ -80,7 +80,7 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView10"
+                    app:layout_constraintEnd_toStartOf="@+id/faqtexttoolbar"
                     app:layout_constraintStart_toEndOf="@+id/completeprofileback"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -121,7 +121,7 @@
             android:paddingBottom="3dp">
 
             <TextView
-                android:id="@+id/textView42"
+                android:id="@+id/copytext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -132,7 +132,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/imageView11"
+                android:id="@+id/copyimage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -183,7 +183,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/textView44"
+                android:id="@+id/invitefriend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -302,7 +302,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/button2"
+            android:id="@+id/refernowbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

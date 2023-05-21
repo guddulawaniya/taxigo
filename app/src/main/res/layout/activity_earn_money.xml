@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:gravity="center"
-            android:text="Earn Money"
+            android:text="@string/earn_money"
             android:textColor="@color/textcolor"
             android:textSize="18dp" />
 
@@ -44,7 +44,7 @@
             android:drawableStart="@drawable/help_support_icon"
             android:drawablePadding="5dp"
             android:gravity="center"
-            android:text="Support"
+            android:text="@string/support"
             android:textColor="@color/textcolor" />
     </androidx.appcompat.widget.Toolbar>
 
@@ -68,7 +68,7 @@
 
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
-            android:text="Become a captain to drive and earn money on taxigo."
+            android:text="@string/earn_money_title"
             android:textColor="@color/textcolor"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -120,10 +120,9 @@
         app:layout_constraintVertical_bias="0.5">
 
         <TextView
-            android:id="@+id/textView13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="What do you need?"
+            android:text="@string/what_do_you_need"
             android:textColor="@color/textcolor"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -135,7 +134,7 @@
             android:drawableStart="@drawable/correct"
             android:drawablePadding="10dp"
             android:gravity="center_vertical"
-            android:text="Driving liences"
+            android:text="@string/driving_liences"
             android:textColor="@color/textcolor"
             android:textSize="16sp" />
 
@@ -146,7 +145,7 @@
             android:drawableStart="@drawable/correct"
             android:drawablePadding="10dp"
             android:gravity="center_vertical"
-            android:text="Vehicle Registration Certificate"
+            android:text="@string/vehicle_registration_certificate"
             android:textColor="@color/textcolor"
             android:textSize="16sp" />
 
@@ -157,7 +156,7 @@
             android:drawableStart="@drawable/correct"
             android:drawablePadding="10dp"
             android:gravity="center_vertical"
-            android:text="Bike model should n't be older then 2010"
+            android:text="@string/bike_model_should_n_t_be_older_then_2010"
             android:textColor="@color/textcolor"
             android:textSize="16sp" />
 
@@ -175,7 +174,7 @@
 
                 android:drawableStart="@drawable/whatsapp"
                 android:drawablePadding="10dp"
-                android:text="Chat with us"
+                android:text="@string/chat_with_us"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:paddingTop="10dp"
@@ -197,7 +196,7 @@
                 android:paddingEnd="20dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:text="Call us"
+                android:text="@string/call_us"
                 android:textColor="#128C7E "
                 android:textSize="22sp" />
 
@@ -216,7 +215,7 @@
         android:layout_marginBottom="16dp"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:text="Start Earning"
+        android:text="@string/start_earning"
         android:textSize="18sp"
         android:textColor="@color/textcolor"
         android:backgroundTint="#EFC41A"

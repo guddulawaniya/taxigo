@@ -18,7 +18,7 @@ public class myride_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_select_an_order);
         CollapsingToolbarLayout title = findViewById(R.id.toolbar_layout);
 
-        title.setTitle("Orders");
+        title.setTitle(getString(R.string.orders));
 
         TabLayout tabs = findViewById(R.id.selectordertabs);
         ViewPager viewPager = findViewById(R.id.select_view_pager);

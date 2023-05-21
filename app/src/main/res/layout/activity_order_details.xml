@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="19dp"
-                android:text="Order Details"
+                android:text="@string/order_details"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -87,7 +87,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
-                        android:text="Service Type"
+                        android:text="@string/service_type"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -96,7 +96,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
-                        android:text="Auto"
+                        android:text="@string/auto"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
                 </RelativeLayout>
@@ -111,7 +111,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
-                        android:text="Date of Ride"
+                        android:text="@string/date_of_ride"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -134,7 +134,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
-                        android:text="Ride ID"
+                        android:text="@string/ride_id"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -172,7 +172,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
-                        android:text="₹ 0.0"
+                        android:text="@string/_0_0"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
                 </RelativeLayout>
@@ -214,7 +214,7 @@
                                 android:layout_marginTop="5dp"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:text="Distance"
+                                android:text="@string/distance"
                                 android:textColor="@color/hintcolor" />
                         </LinearLayout>
 
@@ -246,7 +246,7 @@
                                 android:layout_gravity="center"
                                 android:layout_marginTop="5dp"
                                 android:gravity="center"
-                                android:text="Duration"
+                                android:text="@string/duration"
                                 android:textColor="@color/hintcolor" />
                         </LinearLayout>
                     </LinearLayout>
@@ -288,7 +288,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
-                    android:text="Support"
+                    android:text="@string/support"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -310,7 +310,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp"
-                        android:text="I have been charged a cancellation fee"
+                        android:text="@string/i_have_been_charged_a_cancellation_fee"
                         android:textColor="@color/textcolor"
                         android:textSize="15dp" />
 
@@ -319,7 +319,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp"
-                        android:text="Captain asked me to cancle the ride"
+                        android:text="@string/captain_asked_me_to_cancle_the_ride"
                         android:textColor="@color/textcolor"
                         android:textSize="15dp" />
 
@@ -327,16 +327,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp"
-                        android:text="Ride Safety"
-                        android:textColor="@color/textcolor"
-                        android:textSize="15dp" />
-
-                    <TextView
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
-                        android:text="Blog"
+                        android:text="@string/ride_safety"
                         android:textColor="@color/textcolor"
                         android:textSize="15dp" />
 
@@ -345,7 +336,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp"
-                        android:text="I want to report an issue about the Captain/ Ride"
+                        android:text="@string/blog"
                         android:textColor="@color/textcolor"
                         android:textSize="15dp" />
 
@@ -354,7 +345,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp"
-                        android:text="Covid-19 Safety"
+                        android:text="@string/i_want_to_report_an_issue_about_the_captain_ride"
+                        android:textColor="@color/textcolor"
+                        android:textSize="15dp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="@string/covid_19_safety"
                         android:textColor="@color/textcolor"
                         android:textSize="15dp" />
                 </LinearLayout>

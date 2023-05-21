@@ -1,6 +1,65 @@
 <resources>
     <string name="app_name">Taxigo</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_maps">MapsActivity</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="about">About</string>
+    <string name="support">Support</string>
+    <string name="claims">Claims</string>
+    <string name="complete_profile">Complete Profile</string>
+    <string name="whats_s_pending">Whats\'s pending?</string>
+    <string name="date_of_birth" translatable="false">Date of birth</string>
+    <string name="add_a_payment_method" translatable="false">Add a payment method</string>
+    <string name="home_location" translatable="false">Home location</string>
+    <string name="work_location" translatable="false">Work location</string>
+    <string name="emergency_contacts" translatable="false">Emergency contacts</string>
+    <string name="completed" translatable="false">Completed</string>
+    <string name="sign_up" translatable="false">Sign Up</string>
+    <string name="name" translatable="false">Name</string>
+    <string name="book_yout_first_ride" translatable="false">Book yout first ride</string>
+    <string name="earn_money" translatable="false">Earn Money</string>
+    <string name="earn_money_title" translatable="false">Become a captain to drive and earn money on taxigo.</string>
+    <string name="what_do_you_need" translatable="false">What do you need?</string>
+    <string name="driving_liences" translatable="false">Driving liences</string>
+    <string name="vehicle_registration_certificate" translatable="false">Vehicle Registration Certificate</string>
+    <string name="bike_model_should_n_t_be_older_then_2010" translatable="false">Bike model should n\'t be older then 2010</string>
+    <string name="call_us" translatable="false">Call us</string>
+    <string name="chat_with_us" translatable="false">Chat with us</string>
+    <string name="start_earning" translatable="false">Start Earning</string>
+    <string name="enter_the_issue_you_are_looking_for" translatable="false">Enter the issue you are looking for</string>
+    <string name="edit_mail" translatable="false">Edit Mail</string>
+    <string name="favorites" translatable="false">Favorites</string>
+    <string name="add_address" translatable="false">Add Address</string>
+    <string name="choose_language" translatable="false">Choose Language</string>
+    <string name="save" translatable="false">Save</string>
+    <string name="local" translatable="false">Local</string>
+    <string name="pickup_from" translatable="false">Pickup From</string>
+    <string name="add_details_eg_flat_no_contact" translatable="false">Add details (Eg.Flat no,contact)</string>
+    <string name="deliver_to" translatable="false">Deliver To</string>
+    <string name="package_type" translatable="false">Package Type</string>
+    <string name="tap_to_select_category" translatable="false">Tap to select category</string>
+    <string name="textview" translatable="false">TextView</string>
+    <string name="mobile_number" translatable="false">Mobile number</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="enter_drop_location" translatable="false">Enter Drop Location..</string>
+    <string name="your_location" translatable="false">Your Location..</string>
+    <string name="drop_suggestions" translatable="false">Drop suggestions</string>
+    <string name="my_rewards" translatable="false">My Rewards</string>
+    <string name="_0_coins_earned_from_scratch_card" translatable="false">0 coins earned from scratch card</string>
+    <string name="orders" translatable="false">Orders</string>
+    <string name="order_details" translatable="false">Order Details</string>
+    <string name="service_type" translatable="false">Service Type</string>
+    <string name="auto" translatable="false">Auto</string>
+    <string name="date_of_ride" translatable="false">Date of Ride</string>
+    <string name="ride_id" translatable="false">Ride ID</string>
+    <string name="_0_0" translatable="false">₹ 0.0</string>
+    <string name="distance" translatable="false">Distance</string>
+    <string name="duration" translatable="false">Duration</string>
+    <string name="i_have_been_charged_a_cancellation_fee" translatable="false">I have been charged a cancellation fee</string>
+    <string name="captain_asked_me_to_cancle_the_ride" translatable="false">Captain asked me to cancle the ride</string>
+    <string name="ride_safety" translatable="false">Ride Safety</string>
+    <string name="blog" translatable="false">Blog</string>
+    <string name="i_want_to_report_an_issue_about_the_captain_ride" translatable="false">I want to report an issue about the Captain/ Ride</string>
+    <string name="covid_19_safety" translatable="false">Covid-19 Safety</string>
+    <string name="email_address">Email address</string>
 </resources>

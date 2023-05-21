@@ -23,7 +23,7 @@
             android:fitsSystemWindows="true"
             app:collapsedTitleTextColor="@color/textcolor"
             app:expandedTitleTextColor="@color/textcolor"
-            app:title="Complete Profile"
+            app:title="@string/complete_profile"
             app:contentScrim="#EFC41A"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:toolbarId="@+id/toolbar">
@@ -59,7 +59,7 @@
                     android:textColor="@color/textcolor"
                     android:drawableStart="@drawable/help_support_icon"
                     android:layout_marginEnd="20dp"
-                    android:text="Support" />
+                    android:text="@string/support" />
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -85,7 +85,7 @@
                 android:layout_margin="10dp"
                 android:padding="4dp"
                 android:textStyle="bold"
-                android:text="Whats's pending?"
+                android:text="@string/whats_s_pending"
                 android:textColor="@color/textcolor"
                 android:textSize="18sp" />
 
@@ -95,7 +95,7 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
-                android:text="Email address"
+                android:text="@string/email_address"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
                 android:textSize="18sp" />
@@ -106,7 +106,7 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
-                android:text="Date of birth"
+                android:text="@string/date_of_birth"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
                 android:textSize="18sp" />
@@ -117,7 +117,7 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
-                android:text="Add a payment method"
+                android:text="@string/add_a_payment_method"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
                 android:textSize="18sp" />
@@ -128,7 +128,7 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
-                android:text="Home location"
+                android:text="@string/home_location"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
                 android:textSize="18sp" />
@@ -139,7 +139,7 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
-                android:text="Work location"
+                android:text="@string/work_location"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
                 android:textSize="18sp" />
@@ -150,7 +150,7 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
-                android:text="Emergency contacts"
+                android:text="@string/emergency_contacts"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
                 android:textColorHint="@color/hintcolor"
@@ -170,7 +170,7 @@
                 android:drawableTint="@color/hintcolor"
                 android:padding="4dp"
                 android:textStyle="bold"
-                android:text="Completed"
+                android:text="@string/completed"
                 android:textColor="@color/textcolor"
                 android:textSize="18sp" />
 
@@ -180,7 +180,7 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="#18831D"
-                android:text="Sign Up"
+                android:text="@string/sign_up"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
                 android:textColorHint="@color/hintcolor"
@@ -192,7 +192,7 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="#18831D"
-                android:text="Name"
+                android:text="@string/name"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
                 android:textColorHint="@color/hintcolor"
@@ -204,7 +204,7 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="#18831D"
-                android:text="Book yout first ride"
+                android:text="@string/book_yout_first_ride"
                 android:padding="4dp"
                 android:textColor="@color/textcolor"
                 android:textColorHint="@color/hintcolor"

@@ -22,7 +22,7 @@
             android:fitsSystemWindows="true"
             app:collapsedTitleTextColor="@color/textcolor"
             app:expandedTitleTextColor="@color/textcolor"
-            app:title="Claims"
+            app:title="@string/claims"
             app:contentScrim="#EFC41A"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:toolbarId="@+id/toolbar">
@@ -58,7 +58,7 @@
                     android:textColor="@color/textcolor"
                     android:drawableStart="@drawable/help_support_icon"
                     android:layout_marginEnd="20dp"
-                    android:text="Support" />
+                    android:text="@string/support" />
 
             </androidx.appcompat.widget.Toolbar>
 
