@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".select_language">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/Theme.Taxigo.AppBarOverlay">
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EFC41A"
+            android:fitsSystemWindows="true"
+            app:collapsedTitleTextColor="@color/textcolor"
+            app:expandedTitleTextColor="@color/textcolor"
+            app:title="Select Language"
+            app:expandedTitleMarginBottom="40dp"
+            app:contentScrim="#EFC41A"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/language_icon"
+                app:layout_collapseMode="parallax"
+                app:tint="#6AF4FF81" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/Theme.Taxigo.PopupOverlay">
+                <ImageView
+                    android:id="@+id/completeprofileback"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/arrow_back_icon" />
+
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:columnCount="2"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/englishlang"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="20dp"
+                android:backgroundTint="#F6F6F6"
+                android:elevation="6dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="English"
+                    android:textColor="@color/textcolor"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/hindi"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#F6F6F6"
+                android:elevation="6dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="Hindi"
+                    android:textColor="@color/textcolor"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:id="@+id/kannadalang"
+                android:layout_columnWeight="1"
+                android:layout_margin="20dp"
+                android:backgroundTint="#F6F6F6"
+                android:elevation="6dp"
+                app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="Kannada"
+            android:textColor="@color/textcolor"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/telugulang"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#F6F6F6"
+                android:elevation="6dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="Telugu"
+                    android:textColor="@color/textcolor"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:id="@+id/tamillang"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="20dp"
+                android:backgroundTint="#F6F6F6"
+                android:elevation="6dp"
+                app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="Tamil"
+                android:textColor="@color/textcolor"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:id="@+id/marathilang"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#F6F6F6"
+                android:elevation="6dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="Marathi"
+                    android:textColor="@color/textcolor"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+
+
+    </GridLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

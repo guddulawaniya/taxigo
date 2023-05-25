@@ -8,10 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="basecolor">#C69E63</color>
-    <color name="basecolor2">#8C5709</color>
-    <color name="textcolor">#373636</color>
-    <color name="hintcolor">#A5A0A0</color>
+    <color name="basecolor">#FFEB3B</color>
+    <color name="basecolor2">#FFC107</color>
+    <color name="textcolor">#1B1919</color>
+    <color name="hintcolor">#9F9D9D</color>
     <color name="greendotcolor">#4CAF50</color>
     <color name="reddotcolor">#F44336</color>
 </resources>

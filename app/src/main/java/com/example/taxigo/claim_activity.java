@@ -1,8 +1,10 @@
 package com.example.taxigo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -20,6 +22,15 @@ public class claim_activity extends AppCompatActivity {
 
         viewPager.setAdapter(new SectionsPagerAdapter(getSupportFragmentManager()));
         tabs.setupWithViewPager(viewPager);
+        TextView support = findViewById(R.id.support);
+        support.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Redirect_support_Activity.class);
+                intent.putExtra("id",9);
+                startActivity(intent);
+            }
+        });
 
 
         ImageView backbutton = findViewById(R.id.completeprofileback);

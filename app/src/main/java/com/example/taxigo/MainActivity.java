@@ -3,7 +3,9 @@ package com.example.taxigo;
 import android.Manifest;
 import android.Manifest.permission;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
 
+        loadlang();
 
         startaddress_favorate_icon = findViewById(R.id.startaddress_favorate_icon);
         LinearLayout localsenditems = findViewById(R.id.localsend);
@@ -88,6 +91,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         CardView menubutton = findViewById(R.id.menubutton);
         DrawerLayout drawerLayout = findViewById(R.id.drawer);
         startaddresstext = findViewById(R.id.startaddresstext);
+        startaddresstext.setText("Your Current Loaction");
 
         fetchLocation();
         getcurrentlocation.setOnClickListener(new View.OnClickListener() {
@@ -264,7 +268,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     List<Address> addresses = null;
                     try {
                         addresses = gc.getFromLocation(location.getLatitude(),location.getLongitude(),1);
-                        startaddresstext.setText(addresses.get(0).getAddressLine(0));
+
 
                         droplist.add(new modelclass(addresses.get(0).getAddressLine(0),addresses.get(0).getLocality()));
 
@@ -288,6 +292,20 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
 
+    void loadlang()
+    {
+        SharedPreferences preferences = getSharedPreferences("settings", MODE_PRIVATE);
+        String ln = preferences.getString("LANGUAGE_KEY",null);
+        setLocale(ln);
+    }
+    void setLocale(String language)
+    {
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration configuration = new Configuration();
+        configuration.locale = locale;
+        getBaseContext().getResources().updateConfiguration(configuration,getBaseContext().getResources().getDisplayMetrics());
+    }
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
@@ -313,5 +331,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 }
         }
     }
+
 
 }

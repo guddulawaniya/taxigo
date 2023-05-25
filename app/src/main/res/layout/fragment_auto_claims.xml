@@ -31,7 +31,7 @@
                 android:padding="15dp"
                 android:gravity="center"
                 android:layout_margin="20dp"
-                android:text="For Taxigo Auto accident claim or any question regarding it. please write a mail to shoutout@taxigo.bike"
+                android:text="@string/for_taxigo_auto_accident_claim_or_any_question_regarding_it_please_write_a_mail_to_shoutout_taxigo_bike"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
 
@@ -42,7 +42,7 @@
                 android:padding="15dp"
                 android:gravity="center"
                 android:layout_margin="20dp"
-                android:text="we will do our best to resolve your issue. Our support team is here for you , drop us a mail"
+                android:text="@string/we_will_do_our_best_to_resolve_your_issue_our_support_team_is_here_for_you_drop_us_a_mail"
                 android:textColor="#7A7777"
                 android:textSize="11sp" />
 
@@ -61,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Email us"
+                    android:text="@string/email_us"
                     android:layout_margin="10dp"
                     android:src="@drawable/treatment_icon"
                     android:textSize="15dp"

@@ -19,6 +19,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
             android:layout_height="match_parent"
             tools:layout_editor_absoluteX="16dp">
 
@@ -61,16 +62,12 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.5" />
 
-            <TextView
+            <ImageView
                 android:id="@+id/earnmoneysupport"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginEnd="16dp"
-                android:drawableStart="@drawable/help_support_icon"
-                android:drawablePadding="5dp"
-                android:gravity="center"
-                android:text="@string/support"
+                android:src="@drawable/help_support_icon"
                 android:textColor="@color/textcolor"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

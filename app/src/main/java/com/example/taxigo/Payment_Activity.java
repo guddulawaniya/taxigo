@@ -1,5 +1,6 @@
 package com.example.taxigo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -10,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
+import org.w3c.dom.Text;
+
 public class Payment_Activity extends AppCompatActivity {
 
     @Override
@@ -18,6 +21,14 @@ public class Payment_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_payment);
         TextView selectappbottomsheet = findViewById(R.id.selectappbottomsheet);
         ImageView backbutton = findViewById(R.id.completeprofileback);
+        TextView  support = findViewById(R.id.support);
+        support.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Redirect_support_Activity.class);
+                intent.putExtra("id",2);
+            }
+        });
         backbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

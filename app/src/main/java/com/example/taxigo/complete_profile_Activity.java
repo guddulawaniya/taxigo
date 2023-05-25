@@ -1,5 +1,6 @@
 package com.example.taxigo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -19,10 +20,6 @@ public class complete_profile_Activity extends AppCompatActivity {
         binding = ActivityCompleteProfileBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Toolbar toolbar = binding.toolbar;
-        setSupportActionBar(toolbar);
-        CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
-        toolBarLayout.setTitle(getTitle());
 
         binding.completeprofileback.setOnClickListener(new View.OnClickListener() {
             @Override

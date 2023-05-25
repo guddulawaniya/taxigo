@@ -58,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    android:text="Cancelled"
+                    android:text="@string/cancelled"
                     android:textColor="#E10707"
                     android:textSize="15sp" />
 
@@ -69,7 +69,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="15dp"
-                    android:text="Cash"
+                    android:text="@string/cash"
                     android:textColor="@color/textcolor"
                     android:textSize="15sp" />
             </RelativeLayout>

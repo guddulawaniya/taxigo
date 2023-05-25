@@ -44,22 +44,11 @@
                 app:popupTheme="@style/Theme.Taxigo.PopupOverlay">
                 <ImageView
                     android:id="@+id/completeprofileback"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/arrow_back_icon" />
 
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:gravity="center"
-                    android:drawablePadding="5dp"
-                    android:textColor="@color/textcolor"
-                    android:drawableStart="@drawable/help_support_icon"
-                    android:layout_marginEnd="20dp"
-                    android:text="@string/support" />
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -87,7 +76,7 @@
                 android:textStyle="bold"
                 android:text="@string/whats_s_pending"
                 android:textColor="@color/textcolor"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -95,10 +84,10 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
+                android:padding="4dp"
                 android:text="@string/email_address"
-                android:padding="4dp"
                 android:textColor="@color/textcolor"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -106,10 +95,10 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
+                android:padding="4dp"
                 android:text="@string/date_of_birth"
-                android:padding="4dp"
                 android:textColor="@color/textcolor"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -117,10 +106,10 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
+                android:padding="4dp"
                 android:text="@string/add_a_payment_method"
-                android:padding="4dp"
                 android:textColor="@color/textcolor"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -128,10 +117,10 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
+                android:padding="4dp"
                 android:text="@string/home_location"
-                android:padding="4dp"
                 android:textColor="@color/textcolor"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -139,10 +128,10 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
+                android:padding="4dp"
                 android:text="@string/work_location"
-                android:padding="4dp"
                 android:textColor="@color/textcolor"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -150,11 +139,11 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="@color/hintcolor"
-                android:text="@string/emergency_contacts"
                 android:padding="4dp"
+                android:text="@string/emergency_contacts"
                 android:textColor="@color/textcolor"
                 android:textColorHint="@color/hintcolor"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <View
                 android:id="@+id/divider5"
@@ -169,10 +158,10 @@
                 android:layout_margin="10dp"
                 android:drawableTint="@color/hintcolor"
                 android:padding="4dp"
-                android:textStyle="bold"
                 android:text="@string/completed"
                 android:textColor="@color/textcolor"
-                android:textSize="18sp" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -180,11 +169,11 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="#18831D"
+                android:padding="4dp"
                 android:text="@string/sign_up"
-                android:padding="4dp"
                 android:textColor="@color/textcolor"
                 android:textColorHint="@color/hintcolor"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -192,11 +181,11 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="#18831D"
+                android:padding="4dp"
                 android:text="@string/name"
-                android:padding="4dp"
                 android:textColor="@color/textcolor"
                 android:textColorHint="@color/hintcolor"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -204,11 +193,11 @@
                 android:layout_margin="10dp"
                 android:drawableEnd="@drawable/done_icon"
                 android:drawableTint="#18831D"
-                android:text="@string/book_yout_first_ride"
                 android:padding="4dp"
+                android:text="@string/book_yout_first_ride"
                 android:textColor="@color/textcolor"
                 android:textColorHint="@color/hintcolor"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
         </LinearLayout>
 
 

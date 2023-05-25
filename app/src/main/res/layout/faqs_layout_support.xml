@@ -42,6 +42,7 @@
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/safety"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:backgroundTint="#E4E4E4"
@@ -73,12 +74,14 @@
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/ridebilling"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:backgroundTint="#E4E4E4"
                         app:cardCornerRadius="50dp">
 
                         <ImageView
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -105,11 +108,13 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="50dp"
+                        android:id="@+id/services"
                         android:layout_height="50dp"
                         android:backgroundTint="#E4E4E4"
                         app:cardCornerRadius="50dp">
 
                         <ImageView
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -144,6 +149,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
+                        android:id="@+id/accountapp"
                         android:backgroundTint="#E4E4E4"
                         app:cardCornerRadius="50dp">
 
@@ -174,6 +180,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="50dp"
+                        android:id="@+id/referrals"
                         android:layout_height="50dp"
                         android:backgroundTint="#E4E4E4"
                         app:cardCornerRadius="50dp">
@@ -204,6 +211,7 @@
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/payments"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:backgroundTint="#E4E4E4"
@@ -236,14 +244,15 @@
 
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginStart="20dp"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="50dp"
+                        android:id="@+id/powerpass"
                         android:layout_height="50dp"
                         android:backgroundTint="#E4E4E4"
                         app:cardCornerRadius="50dp">

@@ -22,14 +22,16 @@ public class favorites_Activity extends AppCompatActivity {
         support.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Redirect_support_Activity.class));
+                Intent intent = new Intent(getApplicationContext(), Redirect_support_Activity.class);
+                intent.putExtra("id",7);
+                startActivity(intent);
             }
         });
 
         addadress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Search_Activity.class));
+                startActivity(new Intent(getApplicationContext(), MapsActivity.class));
             }
         });
 

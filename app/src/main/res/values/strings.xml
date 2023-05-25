@@ -8,58 +8,109 @@
     <string name="claims">Claims</string>
     <string name="complete_profile">Complete Profile</string>
     <string name="whats_s_pending">Whats\'s pending?</string>
-    <string name="date_of_birth" translatable="false">Date of birth</string>
-    <string name="add_a_payment_method" translatable="false">Add a payment method</string>
-    <string name="home_location" translatable="false">Home location</string>
-    <string name="work_location" translatable="false">Work location</string>
-    <string name="emergency_contacts" translatable="false">Emergency contacts</string>
-    <string name="completed" translatable="false">Completed</string>
-    <string name="sign_up" translatable="false">Sign Up</string>
-    <string name="name" translatable="false">Name</string>
-    <string name="book_yout_first_ride" translatable="false">Book yout first ride</string>
-    <string name="earn_money" translatable="false">Earn Money</string>
-    <string name="earn_money_title" translatable="false">Become a captain to drive and earn money on taxigo.</string>
-    <string name="what_do_you_need" translatable="false">What do you need?</string>
-    <string name="driving_liences" translatable="false">Driving liences</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="add_a_payment_method">Add a payment method</string>
+    <string name="home_location">Home location</string>
+    <string name="work_location">Work location</string>
+    <string name="emergency_contacts">Emergency contacts</string>
+    <string name="completed">Completed</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="book_yout_first_ride">Book yout first ride</string>
+    <string name="earn_money">Earn Money</string>
+    <string name="earn_money_title">Become a captain to drive and earn money on taxigo.</string>
+    <string name="what_do_you_need">What do you need?</string>
+    <string name="driving_liences">Driving liences</string>
     <string name="vehicle_registration_certificate" translatable="false">Vehicle Registration Certificate</string>
     <string name="bike_model_should_n_t_be_older_then_2010" translatable="false">Bike model should n\'t be older then 2010</string>
     <string name="call_us" translatable="false">Call us</string>
     <string name="chat_with_us" translatable="false">Chat with us</string>
     <string name="start_earning" translatable="false">Start Earning</string>
     <string name="enter_the_issue_you_are_looking_for" translatable="false">Enter the issue you are looking for</string>
-    <string name="edit_mail" translatable="false">Edit Mail</string>
-    <string name="favorites" translatable="false">Favorites</string>
-    <string name="add_address" translatable="false">Add Address</string>
-    <string name="choose_language" translatable="false">Choose Language</string>
-    <string name="save" translatable="false">Save</string>
-    <string name="local" translatable="false">Local</string>
-    <string name="pickup_from" translatable="false">Pickup From</string>
-    <string name="add_details_eg_flat_no_contact" translatable="false">Add details (Eg.Flat no,contact)</string>
-    <string name="deliver_to" translatable="false">Deliver To</string>
-    <string name="package_type" translatable="false">Package Type</string>
-    <string name="tap_to_select_category" translatable="false">Tap to select category</string>
+    <string name="edit_mail">Edit_Email</string>
+    <string name="favorites">Favorites</string>
+    <string name="add_address">Add Address</string>
+    <string name="choose_language">Choose Language</string>
+    <string name="save">Save</string>
+    <string name="local">Local</string>
+    <string name="pickup_from">Pickup From</string>
+    <string name="add_details_eg_flat_no_contact">Add details (Eg.Flat no,contact)</string>
+    <string name="deliver_to">Deliver To</string>
+    <string name="package_type">Package Type</string>
+    <string name="tap_to_select_category">Tap to select category</string>
     <string name="textview" translatable="false">TextView</string>
-    <string name="mobile_number" translatable="false">Mobile number</string>
-    <string name="next" translatable="false">Next</string>
-    <string name="enter_drop_location" translatable="false">Enter Drop Location..</string>
-    <string name="your_location" translatable="false">Your Location..</string>
-    <string name="drop_suggestions" translatable="false">Drop suggestions</string>
-    <string name="my_rewards" translatable="false">My Rewards</string>
-    <string name="_0_coins_earned_from_scratch_card" translatable="false">0 coins earned from scratch card</string>
-    <string name="orders" translatable="false">Orders</string>
-    <string name="order_details" translatable="false">Order Details</string>
-    <string name="service_type" translatable="false">Service Type</string>
-    <string name="auto" translatable="false">Auto</string>
-    <string name="date_of_ride" translatable="false">Date of Ride</string>
-    <string name="ride_id" translatable="false">Ride ID</string>
-    <string name="_0_0" translatable="false">₹ 0.0</string>
-    <string name="distance" translatable="false">Distance</string>
-    <string name="duration" translatable="false">Duration</string>
-    <string name="i_have_been_charged_a_cancellation_fee" translatable="false">I have been charged a cancellation fee</string>
-    <string name="captain_asked_me_to_cancle_the_ride" translatable="false">Captain asked me to cancle the ride</string>
-    <string name="ride_safety" translatable="false">Ride Safety</string>
-    <string name="blog" translatable="false">Blog</string>
-    <string name="i_want_to_report_an_issue_about_the_captain_ride" translatable="false">I want to report an issue about the Captain/ Ride</string>
-    <string name="covid_19_safety" translatable="false">Covid-19 Safety</string>
-    <string name="email_address">Email address</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="next">Next</string>
+    <string name="enter_drop_location">Enter Drop Location..</string>
+    <string name="drop_suggestions">Drop suggestions</string>
+    <string name="my_rewards">My Rewards</string>
+    <string name="_0_coins_earned_from_scratch_card">0 coins earned from scratch card</string>
+    <string name="orders">Orders</string>
+    <string name="order_details">Order Details</string>
+    <string name="service_type">Service Type</string>
+    <string name="auto">Auto</string>
+    <string name="date_of_ride">Date of Ride</string>
+    <string name="ride_id">Ride ID</string>
+    <string name="_0_0">₹ 0.0</string>
+    <string name="distance">Distance</string>
+    <string name="duration">Duration</string>
+    <string name="i_have_been_charged_a_cancellation_fee">I have been charged a cancellation fee</string>
+    <string name="captain_asked_me_to_cancle_the_ride">Captain asked me to cancle the ride</string>
+    <string name="ride_safety">Ride Safety</string>
+    <string name="blog">Blog</string>
+    <string name="i_want_to_report_an_issue_about_the_captain_ride">I want to report an issue about the Captain/ Ride</string>
+    <string name="covid_19_safety">Covid-19 Safety</string>
+    <string name="email_address">Email Address</string>
+    <string name="your_location">Your location</string>
+    <string name="settings">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="preferences">Preferences</string>
+    <string name="app_language">App Language</string>
+    <string name="subscribe_to_beta">Subscribe to Beta</string>
+    <string name="logout">Logout</string>
+    <string name="complete_your_profile">Complete Your Profile</string>
+    <string name="local_send_items">Local- Send Items</string>
+    <string name="ride_amp_win"><![CDATA[Ride & Win]]></string>
+    <string name="payment">Payment</string>
+    <string name="my_rides">My Rides</string>
+    <string name="refer_and_earn">Refer and Earn</string>
+    <string name="taxigo_coins">Taxigo Coins</string>
+    <string name="power_pass">Power Pass</string>
+    <string name="notification">Notification</string>
+    <string name="make_more_money">Make more money!</string>
+    <string name="become_a_captain">Become a Captain</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="cash">Cash</string>
+    <string name="discount">Discount*</string>
+    <string name="validity">Validity</string>
+    <string name="total_rides">Total rides</string>
+    <string name="expected_saving">Expected saving*</string>
+    <string name="view_details">View Details</string>
+    <string name="select_category">Select Category</string>
+    <string name="please_select_the_items_you_want_to_send">please select the items you want to send</string>
+    <string name="food">Food</string>
+    <string name="electronics">Electronics</string>
+    <string name="clothes">Clothes</string>
+    <string name="others">Others</string>
+    <string name="groceries">Groceries</string>
+    <string name="medicines">Medicines</string>
+    <string name="documents">Documents</string>
+    <string name="want_to_view_your_past_orders_which_are_more_than_90_days">Want to view your past orders which are more than 90 days</string>
+    <string name="order_of_the_last_90_days_are_shown_here">Order of the last 90 days are shown here.</string>
+    <string name="update_missing_profile_details_to_claim_your_insurance">Update missing profile details to claim your insurance</string>
+    <string name="policy_coverage">Policy coverage</string>
+    <string name="personal_accident_accidental_death">Personal Accident / Accidental Death</string>
+    <string name="medical_expense_for_hospitalization">Medical Expense for hospitalization</string>
+    <string name="opd_treatment">OPD Treatment</string>
+    <string name="legal">Legal</string>
+    <string name="claim_procedure">Claim procedure</string>
+    <string name="view">View</string>
+    <string name="term_and_condition">Term and Condition</string>
+    <string name="please_provide_your_correct_email_id_date_of_birth_and_phone_number_to_avoid_cancellation_of_your_insurance_claim">Please provide your correct email-id date of birth and phone number to avoid cancellation of your insurance claim</string>
+    <string name="claim_insuranace">Claim Insuranace</string>
+    <string name="powered_by_acko">Powered_by ACKO</string>
+    <string name="for_taxigo_auto_accident_claim_or_any_question_regarding_it_please_write_a_mail_to_shoutout_taxigo_bike">For Taxigo Auto accident claim or any question regarding it. please write a mail to shoutout@taxigo.bike</string>
+    <string name="we_will_do_our_best_to_resolve_your_issue_our_support_team_is_here_for_you_drop_us_a_mail">we will do our best to resolve your issue. Our support team is here for you , drop us a mail</string>
+    <string name="email_us">Email us</string>
+
 </resources>

@@ -1,5 +1,7 @@
 package com.example.taxigo;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -12,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -21,21 +24,22 @@ import java.util.Locale;
 public class Languages_Activity extends AppCompatActivity {
 
     CardView savebutton;
-    static String languages = "app_lang";
+    String  ln = "en";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_languages);
         ImageView backbutton = findViewById(R.id.completeprofileback);
-
         savebutton = findViewById(R.id.languagesetbutton);
-        loadlocale();
+
+
 
 
         ListView listView = findViewById(R.id.listview);
 
         String[] languagelist = {"English","हिन्दी (hindi)","मराठी (Marathi)","ಕನ್ನಡ (kannada)","ೆಲುಗು (Telugu)","ತಮಿಳು (Tamil)"};
+
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,R.layout.show_list_item_layout,languagelist);
 
         listView.setAdapter(arrayAdapter);
@@ -45,7 +49,7 @@ public class Languages_Activity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 changelanguages(position);
-                parent.getChildAt(position).setBackgroundColor(Color.BLUE);
+                parent.getChildAt(position).setBackgroundColor(Color.YELLOW);
 
 
             }
@@ -64,31 +68,46 @@ public class Languages_Activity extends AppCompatActivity {
 
     void changelanguages(int id)
     {
+        switch (id)
+        {
+            case 0:setLocale("en");
+                break;
+            case 1:setLocale("hi");
+
+                break;
+            case 2:setLocale("kn");
+
+                break;
+            case 3:setLocale("mr");
+
+                break;
+            case 4:setLocale("te");
+
+                break;
+            case 5:setLocale("ta");
+
+                break;
+
+        }
+
         savebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (id)
-                {
-                    case 0:setLocale("");
-                    break;
-                    case 1:setLocale("hi");
-                    break;
-                    case 2:setLocale("kn");
-                    break;
-                    case 3:setLocale("mr");
-                    break;
-                    case 4:setLocale("te");
-                    break;
-                    case 5:setLocale("ta");
-                    break;
 
-                }
                 recreate();
+                restartActivity();
 
 
             }
         });
 
+
+    }
+    private void restartActivity() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+
+        startActivity(intent);
+        finish();
     }
 
     void setLocale(String language)
@@ -100,17 +119,10 @@ public class Languages_Activity extends AppCompatActivity {
         getBaseContext().getResources().updateConfiguration(configuration,getBaseContext().getResources().getDisplayMetrics());
 
         SharedPreferences.Editor editor = getSharedPreferences("settings",MODE_PRIVATE).edit();
-        editor.putString("app_lang",language);
+        editor.putString("LANGUAGE_KEY",language);
+        editor.commit();
         editor.apply();
     }
 
-    private void loadlocale(){
-
-        SharedPreferences preferences = getSharedPreferences("settings",MODE_PRIVATE);
-       languages = preferences.getString("app_lang",null);
-        setLocale(languages);
-
-
-    }
 
 }

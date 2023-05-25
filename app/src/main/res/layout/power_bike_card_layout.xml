@@ -50,7 +50,7 @@
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Discount*"
+                        android:text="@string/discount"
                         android:textColor="#AAA8A8"
                         android:textSize="13sp" />
 
@@ -73,7 +73,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Validity"
+                        android:text="@string/validity"
                         android:textColor="#AAA8A8"
                         android:textSize="13sp" />
 
@@ -96,7 +96,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Total rides"
+                        android:text="@string/total_rides"
                         android:textColor="#AAA8A8"
                         android:textSize="13sp" />
 
@@ -139,7 +139,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:text="View Details"
+                    android:text="@string/view_details"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
             </RelativeLayout>
@@ -195,7 +195,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="15dp"
-                    android:text="Expected saving*"
+                    android:text="@string/expected_saving"
                     android:textColor="@color/hintcolor"
                     android:textSize="12sp"
                     tools:layout_editor_absoluteX="56dp"

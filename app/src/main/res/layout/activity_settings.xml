@@ -23,7 +23,7 @@
             android:fitsSystemWindows="true"
             app:collapsedTitleTextColor="@color/textcolor"
             app:expandedTitleTextColor="@color/textcolor"
-            app:title="Settings"
+            app:title="@string/settings"
             app:expandedTitleMarginBottom="40dp"
             app:contentScrim="#EFC41A"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
@@ -61,7 +61,7 @@
                     android:textColor="@color/textcolor"
                     android:drawableStart="@drawable/help_support_icon"
                     android:layout_marginEnd="20dp"
-                    android:text="Support" />
+                    android:text="@string/support" />
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -125,7 +125,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:text="Profile"
+                        android:text="@string/profile"
                         android:textColor="@color/textcolor"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -188,7 +188,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:text="Favorites"
+                        android:text="@string/favorites"
                         android:textColor="@color/textcolor"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -251,7 +251,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:text="Preferences"
+                        android:text="@string/preferences"
                         android:textColor="@color/textcolor"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -314,7 +314,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:text="App Language"
+                        android:text="@string/app_language"
                         android:textColor="@color/textcolor"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -322,6 +322,7 @@
 
                     <TextView
 
+                        android:id="@+id/langNamehint"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -397,7 +398,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:text="About"
+                        android:text="@string/about"
                         android:textColor="@color/textcolor"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -459,7 +460,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:text="Subscribe to Beta"
+                        android:text="@string/subscribe_to_beta"
                         android:textColor="@color/textcolor"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -522,7 +523,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:text="Logout"
+                        android:text="@string/logout"
                         android:textColor="@color/textcolor"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"

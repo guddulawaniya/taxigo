@@ -44,7 +44,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:text="Update missing profile details to claim your insurance"
+                    android:text="@string/update_missing_profile_details_to_claim_your_insurance"
                     android:textColor="@color/black" />
 
             </LinearLayout>
@@ -60,7 +60,7 @@
                     android:layout_height="wrap_content"
                     android:background="#DDDDDD"
                     android:padding="15dp"
-                    android:text="Policy coverage"
+                    android:text="@string/policy_coverage"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -98,7 +98,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Personal Accident / Accidental Death"
+                            android:text="@string/personal_accident_accidental_death"
                             android:textColor="@color/black"
                             android:textSize="15sp" />
 
@@ -146,7 +146,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Medical Expense for hospitalization"
+                            android:text="@string/medical_expense_for_hospitalization"
                             android:textColor="@color/black"
                             android:textSize="15sp" />
 
@@ -194,7 +194,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="OPD Treatment"
+                            android:text="@string/opd_treatment"
                             android:textColor="@color/black"
                             android:textSize="15sp" />
 
@@ -214,7 +214,7 @@
                     android:layout_height="wrap_content"
                     android:background="#DDDDDD"
                     android:padding="15dp"
-                    android:text="Legal"
+                    android:text="@string/legal"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -226,7 +226,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Claim procedure"
+                        android:text="@string/claim_procedure"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:textColor="@color/black"
@@ -235,9 +235,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/claimview"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
-                        android:text="View"
+                        android:text="@string/view"
                         android:textColor="@color/purple_500"
                         android:textSize="15sp" />
                 </RelativeLayout>
@@ -250,16 +251,17 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:text="Term and Condition"
+                        android:text="@string/term_and_condition"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
+                        android:id="@+id/termview"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
-                        android:text="View"
+                        android:text="@string/view"
                         android:textColor="@color/purple_500"
                         android:textSize="15sp" />
                 </RelativeLayout>
@@ -269,7 +271,7 @@
                     android:layout_height="wrap_content"
                     android:background="#DDDDDD"
                     android:padding="15dp"
-                    android:text="Please provide your correct email-id date of birth and phone number to avoid cancellation of your insurance claim"
+                    android:text="@string/please_provide_your_correct_email_id_date_of_birth_and_phone_number_to_avoid_cancellation_of_your_insurance_claim"
                     android:textColor="@color/black"
                     android:textSize="13sp" />
 
@@ -288,7 +290,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Claim insuranace"
+                        android:text="@string/claim_insuranace"
                         android:layout_margin="10dp"
                         android:src="@drawable/treatment_icon"
                         android:textSize="15dp"
@@ -299,9 +301,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Powered_by ACKO"
+                    android:text="@string/powered_by_acko"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:textColor="@color/black"
                     android:textSize="8sp" />
             </LinearLayout>

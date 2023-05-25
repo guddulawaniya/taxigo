@@ -33,16 +33,14 @@ public class profile_Activity extends AppCompatActivity {
             }
         });
 
-        Toolbar toolbar = binding.toolbar;
-        setSupportActionBar(toolbar);
-        CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
-        toolBarLayout.setTitle(getTitle());
 
 
         binding.supporttext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Redirect_support_Activity.class));
+                Intent intent = new Intent(getApplicationContext(), Redirect_support_Activity.class);
+                intent.putExtra("id",7);
+                startActivity(intent);
 
             }
         });

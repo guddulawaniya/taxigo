@@ -1,6 +1,7 @@
 package com.example.taxigo;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class settings_Activity extends AppCompatActivity {
 
+    TextView langNamehint;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +26,10 @@ public class settings_Activity extends AppCompatActivity {
         LinearLayout betalinear = findViewById(R.id.betalinear);
         LinearLayout logoutlinear = findViewById(R.id.logoutlinear);
 
+
         TextView support = findViewById(R.id.supportsetting);
+        langNamehint = findViewById(R.id.langNamehint);
+        setlangHint();
         logoutlinear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,5 +88,27 @@ public class settings_Activity extends AppCompatActivity {
         });
 
 
+    }
+
+
+    void setlangHint()
+    {
+        SharedPreferences preferences = getSharedPreferences("settings",MODE_PRIVATE);
+
+        switch (preferences.getString("LANGUAGE_KEY",null))
+        {
+            case "en":langNamehint.setText("English");
+            break;
+            case "hi":langNamehint.setText("हिन्दी (hindi)");
+            break;
+            case "kn":langNamehint.setText("मराठी (Marathi)");
+            break;
+            case "mr":langNamehint.setText("ಕನ್ನಡ (kannada)");
+            break;
+            case "te":langNamehint.setText("ೆಲುಗು (Telugu)");
+            break;
+            case "ta":langNamehint.setText("हತಮಿಳು (Tamil)");
+            break;
+        }
     }
 }

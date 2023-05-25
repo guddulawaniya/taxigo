@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:text="Select Category"
+            android:text="@string/select_category"
             android:textColor="@color/black"
             android:textSize="22sp" />
 
@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="please select the items you want to send"
+            android:text="@string/please_select_the_items_you_want_to_send"
             android:textColor="@color/textcolor" />
 
         <CheckBox
@@ -50,7 +50,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:paddingStart="20dp"
-            android:text="Food"
+            android:text="@string/food"
             android:textColor="@color/textcolor"
             android:textSize="18dp" />
 
@@ -60,7 +60,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:paddingStart="20dp"
-            android:text="Electronics"
+            android:text="@string/electronics"
             android:textColor="@color/textcolor"
             android:textSize="18dp" />
 
@@ -70,7 +70,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:paddingStart="20dp"
-            android:text="Clothes"
+            android:text="@string/clothes"
             android:textColor="@color/textcolor"
             android:textSize="18dp" />
 
@@ -80,7 +80,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:paddingStart="20dp"
-            android:text="Others"
+            android:text="@string/others"
             android:textColor="@color/textcolor"
             android:textSize="18dp" />
 
@@ -90,7 +90,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:paddingStart="20dp"
-            android:text="Groceries"
+            android:text="@string/groceries"
             android:textColor="@color/textcolor"
             android:textSize="18dp" />
 
@@ -100,7 +100,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:paddingStart="20dp"
-            android:text="Medicines"
+            android:text="@string/medicines"
             android:textColor="@color/textcolor"
             android:textSize="18dp" />
 
@@ -111,8 +111,8 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="20dp"
             android:paddingStart="20dp"
-            android:paddingBottom="20dp"
-            android:text="Documents"
+            android:gravity="center_vertical"
+            android:text="@string/documents"
             android:textColor="@color/textcolor"
             android:textSize="18dp" />
     </LinearLayout>
@@ -135,7 +135,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/button"
+            android:id="@+id/backbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -152,7 +152,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/button2"
+            android:id="@+id/proceedbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"

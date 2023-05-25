@@ -4,93 +4,125 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/basecolor"
     tools:context=".otp_Activtiy">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="156dp"
-        android:layout_marginEnd="16dp"
-        android:gravity="center"
-        android:orientation="horizontal"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/verifybuttonotp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/num1"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/btnbg"
-            android:gravity="center"
-            android:hint="-"
-            android:maxLength="1"
-            android:textColor="#403E3E"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/num2"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/btnbg"
-            android:gravity="center"
-            android:hint="-"
-            android:maxLength="1"
-            android:textColor="#403E3E"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/num3"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/btnbg"
-            android:gravity="center"
-            android:hint="-"
-            android:maxLength="1"
-            android:textColor="#403E3E"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="40dp"
+                    app:srcCompat="@drawable/scooter" />
 
-        <EditText
-            android:id="@+id/num4"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/btnbg"
-            android:gravity="center"
-            android:hint="-"
-            android:maxLength="1"
-            android:textColor="#403E3E"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Verify Enter Mobile Number."
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="35dp"
+                    android:gravity="center"
+                    android:text="Please Enter the OTP send your register mobile number"
+                    android:textColor="@color/textcolor"
+                    android:textSize="14sp" />
+
+                <com.chaos.view.PinView
+                    android:id="@+id/pinview"
+                    style="@style/PinWidget.PinView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:cursorVisible="true"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/textcolor"
+                    android:itemBackground="@color/white"
+                    android:textSize="25dp"
+                    app:cursorColor="@color/basecolor"
+                    app:hideLineWhenFilled="false"
+                    app:itemCount="4"
+                    app:itemHeight="50dp"
+                    app:itemRadius="10dp"
+                    app:itemWidth="50dp"
+                    app:lineColor="#C18D40">
+
+                </com.chaos.view.PinView>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="Didn't received OTP :"
+                        android:textColor="@color/textcolor" />
+
+                    <TextView
+                        android:id="@+id/resendotp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:padding="3dp"
+                        android:text="Resend"
+                        android:textColor="@color/purple_500" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/nextbutton"
+    <Button
+        android:id="@+id/verifybuttonotp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="52dp"
-        android:backgroundTint="@color/basecolor2"
-        app:cornerRadius="10dp"
-        android:textColor="@color/white"
-        android:text="Next"
-        android:textSize="24sp"
-        android:paddingTop="10dp"
-        android:gravity="center"
-        android:paddingBottom="10dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:padding="15dp"
+        android:textSize="18dp"
+        android:backgroundTint="#FFC107"
+        android:text="Verify"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
