@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".otp_Activtiy">
 
@@ -29,10 +30,10 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
                     android:layout_marginTop="40dp"
-                    app:srcCompat="@drawable/scooter" />
+                    app:srcCompat="@drawable/imagebikeperson" />
 
                 <TextView
                     android:layout_width="wrap_content"

@@ -93,6 +93,10 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         startaddresstext = findViewById(R.id.startaddresstext);
         startaddresstext.setText("Your Current Loaction");
 
+
+
+
+
         fetchLocation();
         getcurrentlocation.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,7 +110,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         startaddress_favorate_icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), favorites_Activity.class));
+                selectapp_bottom_sheet sheet = new selectapp_bottom_sheet();
+                sheet.show(getSupportFragmentManager(),"bottom");
             }
         });
 
@@ -269,10 +274,15 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     try {
                         addresses = gc.getFromLocation(location.getLatitude(),location.getLongitude(),1);
 
+                        startaddresstext.setText(addresses.get(0).getAddressLine(0));
+                        SharedPreferences.Editor editor = getSharedPreferences("location",MODE_PRIVATE).edit();
+                        editor.putString("add",addresses.get(0).getAddressLine(0));
+                        editor.commit();
 
                         droplist.add(new modelclass(addresses.get(0).getAddressLine(0),addresses.get(0).getLocality()));
 
                         dropAdapter adapter = new  dropAdapter(droplist,MainActivity.this);
+
 
                         dropreyclerview.setLayoutManager(new LinearLayoutManager(MainActivity.this));
                         dropreyclerview.setAdapter(adapter);

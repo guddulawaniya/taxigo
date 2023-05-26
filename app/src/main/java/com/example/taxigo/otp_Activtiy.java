@@ -48,7 +48,7 @@ public class otp_Activtiy extends AppCompatActivity {
 
 
         showmessage.setText("We will send you an One Time Password on this number +91- "+number);
-
+        timecounter();
         resendotp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,7 +81,7 @@ public class otp_Activtiy extends AppCompatActivity {
 
 
                     Toast.makeText(getApplicationContext(), "Verified", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    startActivity(new Intent(getApplicationContext(), select_language.class));
                     finish();
                 } else if (!nt.isConnected()) {
 

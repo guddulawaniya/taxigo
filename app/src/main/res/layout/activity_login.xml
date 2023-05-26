@@ -4,74 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFEB3B"
+    android:background="@color/white"
     tools:context=".login_Activity">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:cardCornerRadius="10dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/nextbutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.smarteist.autoimageslider.SliderView
-            android:id="@+id/image_slider"
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/imagebikeperson" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="Enter Your Mobile Number"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:sliderAnimationDuration="600"
-            app:sliderAutoCycleDirection="back_and_forth"
-            app:sliderAutoCycleEnabled="true"
-            app:sliderIndicatorAnimationDuration="600"
-            app:sliderIndicatorGravity="center_horizontal|bottom"
-            app:sliderIndicatorMargin="15dp"
-            app:sliderIndicatorOrientation="horizontal"
-            app:sliderIndicatorPadding="3dp"
-            app:sliderIndicatorRadius="2dp"
-            app:sliderIndicatorSelectedColor="#FFC107"
-            app:sliderIndicatorUnselectedColor="#8C8787"
-            app:sliderScrollTimeInSec="2"
-            app:sliderStartAutoCycle="true" />
-    </androidx.cardview.widget.CardView>
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:text="we will send you the 4 digit verification code"
+            android:textColor="@color/hintcolor"
+            android:textSize="13sp" />
 
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/mobilenumberlayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="20dp"
-        android:hint="@string/mobile_number"
-        android:textColorHint="@color/hintcolor"
-        app:boxBackgroundColor="@color/white"
-        app:boxStrokeColor="#095B9C"
-        app:hintTextColor="#134F7E"
-        app:prefixText="+91- "
-        app:prefixTextColor="#134F7E"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputmobileNo"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mobilenumberlayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="number"
-            android:textColor="@color/textcolor"
-            android:textSize="18sp">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/mobile_number"
+            android:textColorHint="@color/hintcolor"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="#095B9C"
+            app:hintTextColor="#134F7E"
+            app:prefixText="+91- "
+            app:prefixTextColor="#134F7E">
 
-        </com.google.android.material.textfield.TextInputEditText>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputmobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:textColor="@color/textcolor"
+                android:textSize="18sp">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputEditText>
 
-
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/nextbutton"
@@ -81,13 +80,13 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="52dp"
         android:backgroundTint="#FFC107"
-        app:cornerRadius="10dp"
-        android:textColor="@color/black"
-        android:text="@string/next"
-        android:textSize="24sp"
-        android:paddingTop="10dp"
         android:gravity="center"
+        android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:text="@string/next"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
