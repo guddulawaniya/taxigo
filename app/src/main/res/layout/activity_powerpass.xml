@@ -83,9 +83,7 @@
             android:layout_margin="20dp"
             android:layout_height="wrap_content"
             android:background="@color/white"
-
             app:tabBackground="@drawable/tabtextbg"
-            app:tabIndicatorColor="#FFEB3B"
             app:tabSelectedTextColor="@color/black"
             app:tabTextColor="@color/white" />
     </com.google.android.material.appbar.AppBarLayout>

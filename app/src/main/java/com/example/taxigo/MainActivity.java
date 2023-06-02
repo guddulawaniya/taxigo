@@ -14,6 +14,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         LinearLayout powerpass = findViewById(R.id.powerpass);
         LinearLayout notification = findViewById(R.id.notification);
         LinearLayout claim = findViewById(R.id.claim);
+        RelativeLayout starlayout = findViewById(R.id.rating);
         LinearLayout settings = findViewById(R.id.settings);
         LinearLayout support = findViewById(R.id.support);
         LinearLayout completeprofile = findViewById(R.id.completeprofile);
@@ -94,6 +96,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         startaddresstext.setText("Your Current Loaction");
 
 
+        starlayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,Rating_activity.class));
+            }
+        });
 
 
 

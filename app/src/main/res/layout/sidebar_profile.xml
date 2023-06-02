@@ -74,12 +74,13 @@
                     android:background="@color/hintcolor" />
 
                 <RelativeLayout
+                    android:id="@+id/rating"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="10dp">
 
                     <TextView
-                        android:id="@+id/rating"
+
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:drawableStart="@drawable/baseline_star_24"

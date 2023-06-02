@@ -52,13 +52,14 @@
                     android:src="@drawable/arrow_back_icon" />
 
                 <ImageView
+                    android:id="@+id/menuicon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
-                    android:gravity="center"
+                    android:layout_marginEnd="20dp"
                     android:drawablePadding="5dp"
-                    android:src="@drawable/more_vert"
-                    android:layout_marginEnd="20dp" />
+                    android:gravity="center"
+                    android:src="@drawable/more_vert" />
 
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.CollapsingToolbarLayout>

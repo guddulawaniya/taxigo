@@ -1,5 +1,6 @@
 package com.example.taxigo;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -30,7 +31,11 @@ public class local_bottom_sheet extends BottomSheetDialogFragment {
         binding.proceedbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dismiss();
+                if (binding.foodbox.isChecked() ||binding.electronicsbox.isChecked() || binding.clothesbox.isChecked() ||
+                binding.groceriesbox.isChecked() || binding.medicinesbox.isChecked() || binding.documentbox.isChecked())
+                {
+                    startActivity(new Intent(getContext(),Search_Activity.class));
+                }
             }
         });
         // Inflate the layout for this fragment

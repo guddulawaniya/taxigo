@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,12 +24,23 @@ public class Earn_money extends AppCompatActivity {
         TextView whastappbutton = findViewById(R.id.whatsappbuttton);
         SliderView sliderView = findViewById(R.id.image_slider);
 
+        Button startearningbutton = findViewById(R.id.startearningbutton);
+
 
         int image[] = {R.drawable.image1,R.drawable.image2,R.drawable.image3};
 
         SliderAdapter sliderAdapter = new SliderAdapter(image);
         sliderView.setSliderAdapter(sliderAdapter);
 
+
+        startearningbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri link = Uri.parse("https://play.google.com/store/search?q=rapido&c=apps");
+                Intent intent = new Intent(Intent.ACTION_VIEW,link);
+                startActivity(intent);
+            }
+        });
 
         callbutton.setOnClickListener(new View.OnClickListener() {
             @Override

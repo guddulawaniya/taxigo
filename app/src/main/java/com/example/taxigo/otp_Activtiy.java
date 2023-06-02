@@ -75,6 +75,8 @@ public class otp_Activtiy extends AppCompatActivity {
             public void onClick(View view) {
 
                 String enterotpinboxs=pinView.getText().toString();
+                startActivity(new Intent(getApplicationContext(), select_language.class));
+                finish();
 
                 if (sendotp.equals(enterotpinboxs) && nt.isConnected())
                 {

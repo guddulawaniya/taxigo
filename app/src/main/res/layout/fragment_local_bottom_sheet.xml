@@ -12,7 +12,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout11"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,14 +20,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView9"
+
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="15dp"
             android:src="@drawable/checkbox" />
 
         <TextView
-            android:id="@+id/textView38"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -37,7 +36,6 @@
             android:textSize="22sp" />
 
         <TextView
-            android:id="@+id/textView39"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
@@ -45,6 +43,7 @@
             android:textColor="@color/textcolor" />
 
         <CheckBox
+            android:id="@+id/foodbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -55,6 +54,7 @@
             android:textSize="18dp" />
 
         <CheckBox
+            android:id="@+id/electronicsbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -65,6 +65,7 @@
             android:textSize="18dp" />
 
         <CheckBox
+            android:id="@+id/clothesbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -74,17 +75,10 @@
             android:textColor="@color/textcolor"
             android:textSize="18dp" />
 
-        <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="15dp"
-            android:paddingStart="20dp"
-            android:text="@string/others"
-            android:textColor="@color/textcolor"
-            android:textSize="18dp" />
+
 
         <CheckBox
+            android:id="@+id/groceriesbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -95,6 +89,7 @@
             android:textSize="18dp" />
 
         <CheckBox
+            android:id="@+id/medicinesbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -105,14 +100,26 @@
             android:textSize="18dp" />
 
         <CheckBox
+            android:id="@+id/documentbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
-            android:layout_marginBottom="20dp"
+
             android:paddingStart="20dp"
             android:gravity="center_vertical"
             android:text="@string/documents"
+            android:textColor="@color/textcolor"
+            android:textSize="18dp" />
+        <CheckBox
+            android:id="@+id/othersbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:paddingStart="20dp"
+            android:text="@string/others"
+            android:layout_marginBottom="20dp"
             android:textColor="@color/textcolor"
             android:textSize="18dp" />
     </LinearLayout>
