@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -33,7 +34,6 @@ public class dropAdapter extends RecyclerView.Adapter<dropAdapter.viewholder>{
         modelclass dropmodel = list.get(position);
         holder.addresstitle.setText(dropmodel.getAddressTitle());
         holder.subtitle.setText(dropmodel.getSubTitle());
-
     }
 
     @Override
@@ -44,11 +44,13 @@ public class dropAdapter extends RecyclerView.Adapter<dropAdapter.viewholder>{
     class viewholder extends RecyclerView.ViewHolder {
 
         TextView addresstitle,subtitle;
+        ImageView droplike;
         public viewholder(@NonNull View itemView) {
             super(itemView);
 
             addresstitle = itemView.findViewById(R.id.addressTitle);
             subtitle = itemView.findViewById(R.id.subTitle);
+            droplike = itemView.findViewById(R.id.droplike);
         }
     }
 

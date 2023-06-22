@@ -2,10 +2,13 @@ package com.example.taxigo;
 
 import android.Manifest;
 import android.Manifest.permission;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.ColorStateList;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -96,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         startaddresstext.setText("Your Current Loaction");
 
 
+
         starlayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,6 +124,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             public void onClick(View v) {
                 selectapp_bottom_sheet sheet = new selectapp_bottom_sheet();
                 sheet.show(getSupportFragmentManager(),"bottom");
+
+
+
             }
         });
 
